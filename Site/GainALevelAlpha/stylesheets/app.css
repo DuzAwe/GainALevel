@@ -5855,3 +5855,620 @@ button.button.large {
 .top-bar-section ul li > a.button.register:hover, .top-bar-section ul li > a.button.register:focus {
   color: white;
 }
+
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+/* line 4, ../sass/_footer.scss */
+.zurb-footer-top {
+  padding: 40px 0;
+  color: white;
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 9, ../sass/_footer.scss */
+.zurb-footer-top .row .columns {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 13, ../sass/_footer.scss */
+.zurb-footer-top.zurb {
+  background-position: 10px 7px;
+}
+
+/* line 16, ../sass/_footer.scss */
+.zurb-footer-top .property {
+  text-align: center;
+}
+
+/* line 19, ../sass/_footer.scss */
+.zurb-footer-top .property .property-info {
+  padding-top: 35px;
+}
+
+/* line 22, ../sass/_footer.scss */
+.zurb-footer-top .property h2 {
+  margin: 0;
+  padding: 0 !important;
+}
+
+/* line 26, ../sass/_footer.scss */
+.zurb-footer-top .property h2 a {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  font-family: "zurb-logo";
+  font-weight: normal;
+  font-size: 1.125em;
+  padding: 0;
+}
+
+/* line 38, ../sass/_footer.scss */
+.zurb-footer-top .property h2 a:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* line 42, ../sass/_footer.scss */
+.zurb-footer-top .property h2 a.services {
+  width: 190px;
+}
+
+/* line 45, ../sass/_footer.scss */
+.zurb-footer-top .property h2 a span {
+  display: none;
+}
+
+/* line 48, ../sass/_footer.scss */
+.zurb-footer-top .property h2 a strong {
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  margin-left: -7px;
+}
+
+/* line 53, ../sass/_footer.scss */
+.zurb-footer-top .property h3 a {
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* line 59, ../sass/_footer.scss */
+.zurb-footer-top .property h4 {
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* line 65, ../sass/_footer.scss */
+.zurb-footer-top .property p, .zurb-footer-top .property li, .zurb-footer-top .property a {
+  font-size: 13px;
+  line-height: 21px;
+  color: white;
+}
+
+/* line 70, ../sass/_footer.scss */
+.zurb-footer-top .property a {
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+/* line 75, ../sass/_footer.scss */
+.zurb-footer-top .property a:hover {
+  opacity: 0.8;
+}
+
+/* line 78, ../sass/_footer.scss */
+.zurb-footer-top .property .learn-links, .zurb-footer-top .property .support-links, .zurb-footer-top .property .connect-links {
+  padding: 50px 0 0 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  background: url("icons/footer-top-icons.png") no-repeat center 0;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+/* line 85, ../sass/_footer.scss */
+.zurb-footer-top .property .learn-links ul, .zurb-footer-top .property .support-links ul, .zurb-footer-top .property .connect-links ul {
+  list-style: none;
+}
+
+/* line 88, ../sass/_footer.scss */
+.zurb-footer-top .property .learn-links ul li, .zurb-footer-top .property .support-links ul li, .zurb-footer-top .property .connect-links ul li {
+  line-height: 20px;
+}
+
+/* line 91, ../sass/_footer.scss */
+.zurb-footer-top .property .learn-links {
+  background-position: center -325px;
+}
+
+/* line 94, ../sass/_footer.scss */
+.zurb-footer-top .property .support-links {
+  background-position: center -635px;
+}
+
+/* line 97, ../sass/_footer.scss */
+.zurb-footer-top .property .connect-links {
+  padding: 50px 20px 0;
+  background-position: center -9px;
+}
+
+/* line 101, ../sass/_footer.scss */
+.zurb-footer-top .property .connect-links .button {
+  font-size: 12px;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.1);
+  color: white !important;
+  font-weight: bold;
+  text-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+  padding: 6px 16px;
+}
+
+/* line 114, ../sass/_footer.scss */
+.zurb-footer-top .global {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* line 117, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block {
+  font-weight: normal;
+  background: url("icons/footer-icons.png") no-repeat 0 0;
+  display: block;
+  margin: 30px 0 0 0;
+}
+
+/* line 123, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block.services {
+  background-position: 0 -198px;
+}
+
+/* line 126, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block.foundation {
+  background-position: 0 -398px;
+}
+
+/* line 129, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block.apps {
+  background-position: 0 -598px;
+}
+
+/* line 132, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block.expo {
+  background-position: 0 -798px;
+}
+
+/* line 135, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block span {
+  display: block;
+  color: white;
+  font-size: 12px;
+  padding-left: 40px;
+  line-height: 18px;
+}
+
+/* line 142, ../sass/_footer.scss */
+.zurb-footer-top .global .footer-link-block span.title {
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* line 147, ../sass/_footer.scss */
+.zurb-footer-bottom {
+  background: #333;
+  padding: 24px 0 10px;
+}
+
+/* line 151, ../sass/_footer.scss */
+.zurb-footer-bottom .design-border {
+  border-bottom: 1px solid #484848;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+/* line 156, ../sass/_footer.scss */
+.zurb-footer-bottom a.zurb-logo {
+  color: #858585;
+  font-weight: normal;
+  background: url("icons/footer-icons.png") no-repeat 0 3px;
+  padding: 25px 0 0 0;
+  font-size: 1em;
+  display: inline-block;
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 90px;
+}
+
+/* line 166, ../sass/_footer.scss */
+.zurb-footer-bottom a.zurb-logo:hover {
+  opacity: 0.8;
+}
+
+/* line 169, ../sass/_footer.scss */
+.zurb-footer-bottom ul.zurb-links {
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 173, ../sass/_footer.scss */
+.zurb-footer-bottom ul.zurb-links li {
+  display: block;
+  float: left;
+  margin-left: 6px;
+  font-family: "Proxima Nova Condensed", "proxima-nova-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* line 182, ../sass/_footer.scss */
+.zurb-footer-bottom ul.zurb-links li a {
+  color: #666;
+  padding: 3px 6px;
+}
+
+/* line 186, ../sass/_footer.scss */
+.zurb-footer-bottom ul.zurb-links li a:hover {
+  color: #777;
+}
+
+/* line 189, ../sass/_footer.scss */
+.zurb-footer-bottom p.copyright {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* line 194, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social {
+  display: block;
+  float: right;
+  margin-bottom: 8px;
+}
+
+/* line 199, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li {
+  list-style: none;
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+
+/* line 205, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li:first-child {
+  margin-left: 0;
+}
+
+/* line 208, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li a {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: url("icons/social.png") no-repeat center 0;
+}
+
+/* line 214, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li a:hover {
+  opacity: 0.8;
+}
+
+/* line 217, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li a.twitter {
+  background-position: center 0;
+}
+
+/* line 220, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li a.facebook {
+  background-position: center -200px;
+}
+
+/* line 223, ../sass/_footer.scss */
+.zurb-footer-bottom ul.home-social li a.mail {
+  background-position: center -400px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* line 227, ../sass/_footer.scss */
+  .zurb-footer-top .property {
+    padding-top: 0;
+  }
+
+  /* line 230, ../sass/_footer.scss */
+  .zurb-footer-top .property .learn-links, .zurb-footer-top .property .support-links, .zurb-footer-top .property .connect-links {
+    height: 240px;
+    padding: 50px 10px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 234, ../sass/_footer.scss */
+  .zurb-footer-top .property .property-info {
+    padding-top: 0;
+  }
+
+  /* line 237, ../sass/_footer.scss */
+  .zurb-footer-top .property .learn-links, .zurb-footer-top .property .support-links, .zurb-footer-top .property .connect-links {
+    border: none;
+    height: auto;
+    padding: 80px 20px 0;
+    margin: 4px 0 0 0;
+    border-top: 1px dotted rgba(255, 255, 255, 0.2);
+  }
+
+  /* line 244, ../sass/_footer.scss */
+  .zurb-footer-top .property .learn-links li a, .zurb-footer-top .property .support-links li a, .zurb-footer-top .property .connect-links li a {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  /* line 248, ../sass/_footer.scss */
+  .zurb-footer-top .property .learn-links p, .zurb-footer-top .property .learn-links a, .zurb-footer-top .property .support-links p, .zurb-footer-top .property .support-links a, .zurb-footer-top .property .connect-links p, .zurb-footer-top .property .connect-links a {
+    font-size: 16px;
+  }
+
+  /* line 251, ../sass/_footer.scss */
+  .zurb-footer-top .property .learn-links {
+    background: none;
+    border: none;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  /* line 257, ../sass/_footer.scss */
+  .zurb-footer-top .property .support-links {
+    padding: 76px 20px 0;
+    background-position: center -618px;
+  }
+
+  /* line 261, ../sass/_footer.scss */
+  .zurb-footer-top .property .connect-links {
+    padding: 76px 20px 14px;
+    background-position: center 10px;
+  }
+
+  /* line 265, ../sass/_footer.scss */
+  .zurb-footer-top .global {
+    border: none;
+  }
+
+  /* line 268, ../sass/_footer.scss */
+  .zurb-footer-top .footer-link-block span {
+    font-size: 0.6875em;
+    line-height: 16px;
+  }
+
+  /* line 272, ../sass/_footer.scss */
+  .zurb-footer-top .footer-link-block.services {
+    border-top: 1px dotted rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
+    margin-top: 0;
+    background-position: 0 -158px !important;
+  }
+
+  /* line 278, ../sass/_footer.scss */
+  .zurb-footer-bottom {
+    text-align: center;
+  }
+
+  /* line 281, ../sass/_footer.scss */
+  .zurb-footer-bottom .columns {
+    padding: 0;
+  }
+
+  /* line 284, ../sass/_footer.scss */
+  .zurb-footer-bottom a.zurb-logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* line 288, ../sass/_footer.scss */
+  .zurb-footer-bottom ul.zurb-links {
+    margin: 16px 0 10px;
+  }
+
+  /* line 291, ../sass/_footer.scss */
+  .zurb-footer-bottom ul.home-social {
+    float: none;
+    margin: 0 0 20px 0;
+    text-align: center;
+    height: 44px;
+    display: inline-block;
+  }
+}
+/* Reformating pillars */
+@media only screen and (max-width: 767px) {
+  /* line 299, ../sass/_footer.scss */
+  .zurb-footer-bottom p.copyright {
+    margin-bottom: 20px !important;
+  }
+
+  /* line 302, ../sass/_footer.scss */
+  .zurb-footer-top .property h3 a {
+    font-size: 23px !important;
+  }
+
+  /* line 305, ../sass/_footer.scss */
+  .zurb-footer-top .property .connect-links {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+  }
+
+  /* line 309, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block {
+    padding-top: 50px;
+    text-align: center;
+    margin: 0 !important;
+    clear: both;
+  }
+
+  /* line 315, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block span {
+    padding-left: 0;
+  }
+
+  /* line 318, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.services {
+    border-top: 0;
+    background-position: 73px -190px !important;
+  }
+
+  /* line 322, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.foundation {
+    background-position: 73px -390px !important;
+  }
+
+  /* line 325, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.apps {
+    padding-top: 80px;
+    background-position: 73px -558px !important;
+  }
+
+  /* line 329, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.expo {
+    padding-top: 80px;
+    background-position: 73px -758px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 333, ../sass/_footer.scss */
+  .zurb-footer-top .property h3 a {
+    font-size: 23px !important;
+  }
+
+  /* line 336, ../sass/_footer.scss */
+  .zurb-footer-bottom ul.zurb-links li a {
+    font-size: 12px;
+  }
+
+  /* line 339, ../sass/_footer.scss */
+  .zurb-footer-top .property .connect-links {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+  }
+
+  /* line 343, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block {
+    padding-top: 50px;
+    text-align: center;
+    margin: 0 !important;
+    clear: both;
+  }
+
+  /* line 349, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block span {
+    padding-left: 0;
+  }
+
+  /* line 352, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.services {
+    border-top: 0;
+    background-position: 55px -190px !important;
+  }
+
+  /* line 356, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.foundation {
+    background-position: 55px -390px !important;
+  }
+
+  /* line 359, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.apps {
+    padding-top: 80px;
+    background-position: 55px -558px !important;
+  }
+
+  /* line 363, ../sass/_footer.scss */
+  .zurb-footer-top .global .footer-link-block.expo {
+    padding-top: 80px;
+    background-position: 55px -758px !important;
+  }
+}
+/* line 366, ../sass/_footer.scss */
+.zurb-footer-top.bg-blue {
+  background: #1399bd;
+}
+
+/* line 369, ../sass/_footer.scss */
+.zurb-footer-top.bg-red {
+  background: #e13626;
+}
+
+/* line 372, ../sass/_footer.scss */
+.zurb-footer-top.bg-fblue {
+  background: #13A7C7;
+}
+
+/* line 375, ../sass/_footer.scss */
+.zurb-footer-top.bg-green {
+  background: #B8D30B;
+}
+
+/* line 378, ../sass/_footer.scss */
+.zurb-footer-top.bg-dgreen {
+  background: #afc908;
+}
+
+/* line 381, ../sass/_footer.scss */
+.zurb-footer-top.bg-magenta {
+  background: #A9014B;
+}
+
+/* line 384, ../sass/_footer.scss */
+.zurb-footer-top.bg-orange {
+  background: #FF5C00;
+}
+
+/* line 387, ../sass/_footer.scss */
+.zurb-footer-top.bg-lorange {
+  background: #FF6908;
+}
+
+/* line 390, ../sass/_footer.scss */
+.zurb-footer-top.bg-oyellow {
+  background: #FC9200;
+}
+
+/* line 393, ../sass/_footer.scss */
+.zurb-footer-top.bg-loyellow {
+  background: #FFB515;
+}
+
+/* Off canvas layout CSS/JS provided by or adapted from work by Jason Weaver and Luke Wroblewski Requires globals.css grid.css */
+/* line 397, ../sass/_footer.scss */
+body.off-canvas {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 401, ../sass/_footer.scss */
+canvas {
+  background: #23B9D2;
+}
+
+/* line 404, ../sass/_footer.scss */
+#sidebar .container {
+  width: 100%;
+}
+
+/* line 407, ../sass/_footer.scss */
+#sidebar .row {
+  overflow: hidden;
+}
+
+/* line 410, ../sass/_footer.scss */
+#sidebar .row .row {
+  overflow: visible;
+}
+
+/* line 413, ../sass/_footer.scss */
+#sidebar .paneled .container {
+  overflow: hidden;
+}

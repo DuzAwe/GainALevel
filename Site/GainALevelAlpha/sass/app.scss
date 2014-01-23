@@ -7,7 +7,7 @@
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
-// @import "foundation/foundation-global"; // *always required
+@import "foundation/foundation-global"; // *always required
 @import "foundation/components/global"; // *always required
 // @import "foundation/components/grid";
 // @import "foundation/components/visibility";
@@ -35,12 +35,14 @@
 // @import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
+//@import "foundation/components/side-nav";
+//@import "foundation/components/sub-nav";
 // @import "foundation/components/switch";
 // @import "foundation/components/magellan";
 // @import "foundation/components/tables";
 // @import "foundation/components/thumbs";
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
-@import "nav"
+@import "nav";
+@import "footer";
+@import "fullcalendar";

@@ -12,9 +12,16 @@
   
   <link rel="stylesheet" href="stylesheets/app.css" />
   
+  
+    <!-- Load jQuery from Google CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- Load jQuery from a local copy if loading from Google fails -->
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="javascripts/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+<script src="javascripts/vendor/jquery-ui.custom.min.js"></script>
+<script src="javascripts/fullcalendar/fullcalendar.min.js"></script>
+<script src="javascripts/fullcalendar/Cal.js"></script>
 
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
-
+<script src="javascripts/vendor/custom.modernizr.js"> </script>
 </head>
 <body>
 
@@ -81,9 +88,9 @@
             <h3 class="show-for-small">Header<hr/></h3>
  
             <div class="panel">
-              <h4 class="hide-for-small">Header<hr/></h4>
-            <h5 class="subheader">Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros. Pellentesque consectetur tempus mi iaculis bibendum. Ut vel dolor sed eros tincidunt volutpat ac eget leo.</h5>
-            </div>
+         
+              <div id='calendar'></div>
+			  	            </div>
  
           <div class="row">
               <div class="large-6 small-6 columns">
@@ -179,40 +186,37 @@
  
       <!-- End Thumbnails -->
  
- 
-      <!-- Footer -->
- 
-        <footer class="row">
-        <div class="large-12 columns"><hr />
-            <div class="row">
- 
-              <div class="large-6 columns">
-                  <p>© Copyright no one at all. Go to town.</p>
-              </div>
- 
-              <div class="large-6 columns">
-                  <ul class="inline-list right">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                  </ul>
-              </div>
- 
-            </div>
-        </div>
-      </footer>
- 
-      <!-- End Footer -->
-    </section>
- 
     </div>
   </div>
+ 
+  <!-- Footer -->
+      <div class="zurb-footer-bottom">
+      <div class="row">
+        <div class="large-4 push-8 columns">
+          <ul class="home-social">
+              <li><a href="#" class="twitter"></a></li>
+              <li><a href="#" class="facebook"></a></li>
+              <li><a href="#" class="mail"></a></li>
+            </ul>
+         </div>
+         <div class="large-8 pull-4 columns">
+            <ul class="zurb-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">News<span class="show-for-medium-up"> &amp; Events</span></a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Sitemap</a></li>
+           </ul>
+           <p class="copyright">© 2013–2014 DropDeadMedia, All rights reserved.</p>
+        </div>          
+      </div>
+    </div>
+ <!-- End Footer -->
+ 
+  </section>
   
-  <!-- Load jQuery from Google CDN -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<!-- Load jQuery from a local copy if loading from Google fails -->
-<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="javascripts/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+
+
 
   <script src="javascripts/foundation/foundation.js"></script>
   <script src="javascripts/foundation/foundation.topbar.js"></script>
