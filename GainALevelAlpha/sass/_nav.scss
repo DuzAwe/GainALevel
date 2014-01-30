@@ -1,0 +1,10 @@
+$topbar-bg: #fff;
+$topbar-height: 48px;
+
+.top-bar-section ul li > a.button.register {
+  @include button-style ($bg:#fc4f00);
+}
+
+.top-bar .title-area .name{
+	padding-left: 10px;
+}
