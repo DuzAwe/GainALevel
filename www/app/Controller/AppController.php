@@ -32,22 +32,22 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array(
+	/*public $components = array(
 		'Session',
 		'Auth' => array(
 			'loginRedirect' => array(
-				'controller' => 'users',
+				'controller' => 'bodybuildingplans',
 				'action' => 'index'
 			),
 			'logoutRedirect' => array(
-				'controller' => 'users',
+				'controller' => 'bodybuildingplans',
 				'action' => 'display', 'home'
 			),
 		)
-	);
+	);*/
 
-	public function beforeFilter() {
-		$this->Auth->allow('index', 'view');
-	}
+	/*public function beforeFilter() {
+		$this->Auth->allow('index', 'msf_step_1', 'msf_step_2', 'msf_step_3', 'msf_step_4');
+	}*/
 
 }

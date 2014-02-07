@@ -671,3 +671,41 @@ Load paths:
 2014-02-07 10:35:58    create stylesheets/app.css 
 2014-02-07 10:35:58    create stylesheets/normalize.css 
 2014-02-07 10:35:59    create stylesheets/tb.css 
+2014-02-07 10:37:19 identical stylesheets/app.css 
+2014-02-07 10:37:37 identical stylesheets/app.css 
+2014-02-07 10:38:31    remove .sass-cache/ 
+2014-02-07 10:38:31    remove stylesheets/app.css 
+2014-02-07 10:38:31    remove stylesheets/normalize.css 
+2014-02-07 10:38:34    create stylesheets/app.css 
+2014-02-07 10:38:34    create stylesheets/normalize.css 
+2014-02-07 10:42:29 overwrite stylesheets/app.css 
+2014-02-07 10:42:54 identical stylesheets/app.css 
+2014-02-07 10:43:06 identical stylesheets/app.css 
+2014-02-07 10:44:52 identical stylesheets/app.css 
+2014-02-07 10:50:28     error sass/app.scss (Line 54: Invalid CSS after "$topbar-height": expected selector or at-rule, was ": 50px")
+2014-02-07 10:50:28 overwrite stylesheets/app.css 
+2014-02-07 10:50:38     error sass/app.scss (Line 54: Invalid CSS after "$topbar-height": expected selector or at-rule, was ": 50px")
+2014-02-07 10:50:38 identical stylesheets/app.css 
+2014-02-07 10:51:06     error sass/app.scss (Line 54: Invalid CSS after "...r-margin-bottom": expected selector or at-rule, was ": em-calc(10)")
+2014-02-07 10:51:06 overwrite stylesheets/app.css 
+2014-02-07 10:51:12     error sass/app.scss (Line 54: Invalid CSS after "...r-margin-bottom": expected selector or at-rule, was ": em-calc(10);")
+2014-02-07 10:51:12 overwrite stylesheets/app.css 
+2014-02-07 10:51:19 overwrite stylesheets/app.css 
+2014-02-07 10:57:45    remove .sass-cache/ 
+2014-02-07 10:57:45    remove stylesheets/app.css 
+2014-02-07 10:57:45    remove stylesheets/normalize.css 
+2014-02-07 10:57:51    create stylesheets/app.css 
+2014-02-07 10:57:52    create stylesheets/normalize.css 
+2014-02-07 10:58:08 identical stylesheets/app.css 
+2014-02-07 10:59:12 overwrite stylesheets/app.css 
+2014-02-07 10:59:16 overwrite stylesheets/app.css 
+2014-02-07 10:59:34 overwrite stylesheets/app.css 
+2014-02-07 10:59:42 overwrite stylesheets/app.css 
+2014-02-07 10:59:49 overwrite stylesheets/app.css 
+2014-02-07 11:00:18 overwrite stylesheets/app.css 
+2014-02-07 12:15:26 overwrite stylesheets/app.css 
+2014-02-07 12:17:23 overwrite stylesheets/app.css 
+2014-02-07 12:18:13 overwrite stylesheets/app.css 
+2014-02-07 12:20:01 overwrite stylesheets/app.css 
+2014-02-07 12:21:11 overwrite stylesheets/app.css 
+2014-02-07 12:21:38 overwrite stylesheets/app.css 

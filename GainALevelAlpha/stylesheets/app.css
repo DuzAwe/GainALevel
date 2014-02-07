@@ -3788,7 +3788,13 @@ form.custom .custom.disabled {
   color: white;
 }
 
-/* line 5, ../sass/_nav.scss */
+/* line 1, ../sass/_nav.scss */
+.top-bar {
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+/* line 8, ../sass/_nav.scss */
 .top-bar-section ul li > a.button.register {
   background-color: #fc4f00;
   border-color: #c93f00;
@@ -3803,24 +3809,9 @@ form.custom .custom.disabled {
   color: white;
 }
 
-/* line 9, ../sass/_nav.scss */
+/* line 12, ../sass/_nav.scss */
 .top-bar .title-area .name {
   padding-left: 10px;
-}
-
-/* line 13, ../sass/_nav.scss */
-.button {
-  background-color: #fc4f00;
-  border-color: #c93f00;
-  color: white;
-}
-/* line 114, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_buttons.scss */
-.button:hover, .button:focus {
-  background-color: #c93f00;
-}
-/* line 125, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_buttons.scss */
-.button:hover, .button:focus {
-  color: white;
 }
 
 /* -----------------------------------------
@@ -5131,14 +5122,14 @@ table.fc-border-separate {
 
 /* Tables */
 /* line 78, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 4, ../sass/tb.scss */
+/* line 4, ../sass/_tb.scss */
 table {
   background: none;
   margin-bottom: 1.25em;
 }
 
 /* line 41, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 11, ../sass/tb.scss */
+/* line 11, ../sass/_tb.scss */
 table thead,
 table tfoot {
   background: whitesmoke;
@@ -5146,7 +5137,7 @@ table tfoot {
 }
 
 /* line 47, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 19, ../sass/tb.scss */
+/* line 19, ../sass/_tb.scss */
 table thead tr th,
 table thead tr td,
 table tfoot tr th,
@@ -5158,7 +5149,7 @@ table tfoot tr td {
 }
 
 /* line 58, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 27, ../sass/tb.scss */
+/* line 27, ../sass/_tb.scss */
 table tr th,
 table tr td {
   padding: 0.5625em 0.625em;
@@ -5167,13 +5158,13 @@ table tr td {
 }
 
 /* line 66, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 33, ../sass/tb.scss */
+/* line 33, ../sass/_tb.scss */
 table tr.even, table tr.alt, table tr:nth-of-type(even) {
   background: #f9f9f9;
 }
 
 /* line 73, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
-/* line 41, ../sass/tb.scss */
+/* line 41, ../sass/_tb.scss */
 table thead tr th,
 table tfoot tr th,
 table tbody tr td,
@@ -5181,4 +5172,32 @@ table tr td,
 table tfoot tr td {
   display: table-cell;
   line-height: 1.125em;
+}
+
+/* line 1, ../sass/_text.scss */
+.plans.subheader {
+  margin-top: 38px;
+  float: right;
+  margin-bottom: 0.5em;
+}
+
+/* line 7, ../sass/_text.scss */
+.plans.header {
+  float: left;
+  margin-bottom: 10px;
+}
+
+/* line 1, ../sass/_button.scss */
+.button {
+  background-color: #fc4f00;
+  border-color: #c93f00;
+  color: white;
+}
+/* line 114, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_buttons.scss */
+.button:hover, .button:focus {
+  background-color: #c93f00;
+}
+/* line 125, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_buttons.scss */
+.button:hover, .button:focus {
+  color: white;
 }

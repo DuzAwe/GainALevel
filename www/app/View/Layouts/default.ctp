@@ -53,6 +53,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		?>
 		<script>
 			$(document).foundation();
+
+			google.load("visualization", "1", {packages:["corechart"]});
+		      	google.setOnLoadCallback(drawChart);
+		      	function drawChart() {
+		        	var data = google.visualization.arrayToDataTable([
+		        	  ['Months', 'Deadlift', 'OHP','Squat','Bench'],
+		        	  ['Jan',  100,      40,    160,    80],
+		        	  ['Feb',  120,      50,    170,    60],
+		        	  ['March',  160,    60,    100,    80],
+		        	  ['April',  220,      55,  90,     100]
+		        	]);
+			
+			        var options = {
+			          backgroundColor:'none', 
+			          chartArea:{left:50,top:50,width:"70%",height:"75%"},
+			          hAxis: {title: 'Months',  titleTextStyle: {color: '#333'}},
+			          vAxis: {minValue: 0},
+			          legend:{position: 'top'}
+			          
+			        };
+			
+			        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+			        chart.draw(data, options);
+			      }
 		</script>
 	</head>
 
@@ -61,7 +85,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<nav class="top-bar">
 		  	<ul class="title-area">
 	            		<!-- Title Area -->
-	            		<li class="name"></li>
+	            		<li class="name"><img src="/img/haed.png"></li>
 	            			<li class="toggle-topbar menu-icon">
 	            				<a href="#">
 	            					<span>Menu</span>
@@ -69,27 +93,32 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					</li>
 	          		</ul>
 			<section class="top-bar-section" style="left: 0%;">
-		        	<!-- Right Nav Section -->
-		        	<ul class="right">
-		        	  	<li class="divider"></li>
-		        	  	<li class="has-dropdown not-click"><a href="#">Track</a>
-		        	  		<ul class="dropdown">
-		        	        		<li class=""><?php echo $this->Html->link('Body Building Plans', array('controller' => 'Bodybuildingplans', 'action' => 'index')); ?></li>
-		        	          		<li class=""><?php echo $this->Html->link('Nutrition', array('controller' => 'Dietplans', 'action' => 'index')); ?></li>
-		        	          		<li class=""><?php echo $this->Html->link('Sleep', array('controller' => 'Sleeps', 'action' => 'index')); ?></li>
-		        	          		<li class=""><?php echo $this->Html->link('Performance', array('controller' => 'Performances', 'action' => 'index')); ?></li>
-		        	          		<li class=""><?php echo $this->Html->link('Measurments', array('controller' => 'Measurments', 'action' => 'index')); ?></li>
-						</ul>
-		        	  	</li>
-		        	  	<li class="divider"></li>
-		        	  	<li class=""><a href="#">Dashboard</a></li>
-		        	  	<li class="divider"></li>
-		        	  	<li class=""><a href="#">Tools</a></li>
-		        	  	<li class="divider"></li>
-		        	  	<li class="has-form">
-		        	  		<a href="#" class="register button"  data-reveal-id="myModal">Getting Started</a>
-		        	  	</li>
-		        	</ul>
+			<!-- Right Nav Section -->
+			        <ul class="right">
+	                		<li class="has-dropdown not-click">
+	                    			<a href="#">Track</a>
+	
+	                    			<ul class="dropdown">
+	                        			<li class=""><a href="#">Workout</a></li>
+	
+	                        			<li class=""><a href="#">Nutrition</a></li>
+	
+	                        			<li class=""><a href="#">Sleep</a></li>
+	
+	                        			<li class=""><a href="#">Performance</a></li>
+	
+	                        			<li class=""><a href="#">Measurements</a></li>
+	                    			</ul>
+	                		</li>
+	
+	                		<li class=""><a href="#">Dashboard</a></li>
+	
+	                		<li class=""><a href="#">Tools</a></li>
+	
+					<li class="has-form">
+			        	  	<a href="#" class="register button"  data-reveal-id="myModal">Getting Started</a>
+			        	</li>
+			        </ul>
 		      	</section>
 		</nav>
 		<!-- End Navigation -->
@@ -100,6 +129,49 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>
+		<div id="myModal" class="reveal-modal small">
+			<?php echo $this->Session->flash('auth'); ?>
+			<?php echo $this->Form->create('User'); ?>
+				<legend><?php echo __('Login'); ?></legend>
+				</br>
+				<?php
+					/*---Email--*/
+					echo $this->Form->input('email');
+		
+		
+					/*---Password--*/
+					echo $this->Form->input('password');
+
+					echo $this->Form->button('Login', array(
+						'type' => 'submit',
+						'div' => false,
+						'class' => 'button')
+					);
+				?>
+				<br/>
+				<?php
+					echo $this->Html->link('Register', '#',
+						array(
+							'class' => 'secondary button', 
+							'data-reveal-id' => 'myModal2'
+						)
+					);
+				?>
+		  	<a class="close-reveal-modal">&#215;</a>
+		</div>
+
+		<div id="myModal2" class="reveal-modal small" style="height: 40%">
+			<iframe seamless src="<?php 
+				echo $this->Html->url(array(
+					'controller' => 'Home',
+					'action' => 'msf_setup'
+					));
+				?>" style="height: 100%; width: 100%; border: none;">
+			</iframe>
+			<?php echo $this->Session->flash('auth'); ?>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		
 	<!-- Footer -->
 		<div class="zurb-footer-bottom">
 			<div class="row">

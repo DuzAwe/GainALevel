@@ -1,0 +1,11 @@
+/*Gain A Level was made by Conor Hughes and Colin Lees in joint partnership with Swansea Metropolitan University in Wales as a third year project.*/
+/* humanstxt.org */
+
+/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+/* zurb.com */
+/* humanstxt.org */
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, Orbit, Reveal
+  Software: Coda, Textmate, Git

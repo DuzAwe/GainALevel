@@ -3,12 +3,6 @@
 
 		public $helpers = array('Html', 'Form');
 
-		public function beforeFilter() {
-			parent::beforeFilter();
-			$this->Auth->allow('add', 'logout', 'login');
-			$this->theme = 'Foundation';
-		}
-
 		public function index(){
 
 		/*----- Collecting data from users table in order of ascending id -----*/
