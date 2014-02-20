@@ -20,7 +20,7 @@
 	
 			echo $this->Html->css('app.css');
 			echo $this->Html->css('normalize.css');
-			
+	
 		/*-- Load javascript --*/
 	
 			echo $this->Html->script('vendor/custom.modernizr.js');
@@ -30,7 +30,10 @@
 	  		echo $this->Html->script('foundation/foundation.topbar.js');
 	  		echo $this->Html->script('foundation/foundation.reveal.js');
 	  		echo $this->Html->script('foundation/foundation.abide.js');
-
+			echo $this->Html->script('fullcalendar/fullcalendar.min.js');
+			echo $this->Html->script('fullcalendar/Cal.js');
+			echo $this->Html->script('jsapi.js');
+	
 		/*-- Fetch data --*/
 	
 			echo $this->fetch('meta');
@@ -41,6 +44,37 @@
 		<script>
 			$(document).foundation();
 		</script>
+		
+		<!-- Google Chart -->
+		
+		<script>
+			google.load("visualization", "1", {packages:["corechart"]});
+		      	google.setOnLoadCallback(drawChart);
+		      	function drawChart() {
+		        	var data = google.visualization.arrayToDataTable([
+		        	  ['Months', 'Deadlift', 'OHP','Squat','Bench'],
+		        	  ['Jan',  100,      40,    160,    80],
+		        	  ['Feb',  120,      50,    170,    60],
+		        	  ['March',  160,    60,    100,    80],
+		        	  ['April',  220,      55,  90,     100]
+		        	]);
+			
+			        var options = {
+			          backgroundColor:'none', 
+			          chartArea:{left:50,top:50,width:"70%",height:"75%"},
+			          hAxis: {title: 'Months',  titleTextStyle: {color: '#333'}},
+			          vAxis: {minValue: 0},
+			          legend:{position: 'top'}
+			          
+			        };
+			
+			        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+			        chart.draw(data, options);
+			      }
+		</script>
+		
+		<!-- End Google Chart -->
+
 	</head>
 
 	<body>
@@ -90,6 +124,50 @@
 				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>
+		
+	<!-- Modals -->
+		
+			<div id="myModal" class="reveal-modal small">
+				<?php echo $this->Form->create('User'); ?>
+					<legend><?php echo __('Login'); ?></legend>
+					</br>
+					<?php
+						/*---Email--*/
+						echo $this->Form->input('email');
+			
+						/*---Password--*/
+						echo $this->Form->input('password');
+
+						echo $this->Form->button('Login', array(
+							'type' => 'submit',
+							'div' => false,
+							'class' => 'button')
+						);
+					?>
+					<br/>
+					<?php
+						echo $this->Html->link('Register', '#',
+							array(
+								'class' => 'secondary button', 
+								'data-reveal-id' => 'myModal2'
+							)
+						);
+					?>
+				<a class="close-reveal-modal">&#215;</a>
+			</div>
+
+			<div id="myModal2" class="reveal-modal small" style="height: 40%">
+				<iframe seamless src="<?php 
+					echo $this->Html->url(array(
+						'controller' => 'Home',
+						'action' => 'signup_setup'
+						));
+					?>" style="height: 100%; width: 100%; border: none;">
+				</iframe>
+				<a class="close-reveal-modal">&#215;</a>
+			</div>
+		
+	<!-- End Modals -->
 		
 	<!-- End Content -->
 		

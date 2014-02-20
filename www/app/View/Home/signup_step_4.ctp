@@ -1,9 +1,3 @@
-<script>
-	window.onunload = refreshParent;
-	function refreshParent() {
-		self.parent.location.reload(true);
-	}
-</script>
 <h3>Do you want to use any of these tracking apps?</h3>
 <?php
 echo $this->Form->create('User');?>
@@ -28,12 +22,12 @@ echo $this->Form->checkbox('sleeptracker', array(
 <br/>
 <br/>
 <?php
-echo $this->Form->button('Save', array(
+echo $this->Form->button('Next Step', array(
 	'type' => 'submit',
-	'class' => 'close-reveal-modal')
+	'class' => 'button')
 );
 echo $this->Html->link('Previous step', array(
-	'action' => 'msf_step', $params['currentStep'] -1), array(
-	'class' => 'button')
+	'action' => 'signup_step', $params['currentStep'] -1), array(
+	'class' => 'secondary button')
 );
 ?>

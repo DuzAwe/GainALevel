@@ -16,6 +16,10 @@ class User extends AppModel {
 		'Outcome' => array(
 			'foreignKey' => false,
 			'conditions' => array('User.outcome = Outcome.id')
+		),
+		'Gender' => array(
+			'foreignKey' => false,
+			'conditions' => array('User.gender = Gender.id')
 		)
 	);
 

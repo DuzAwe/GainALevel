@@ -77,7 +77,7 @@ echo $this->Form->button('Next step', array(
 	'class' => 'button')
 );
 echo $this->Html->link('Previous step', array(
-	'action' => 'msf_step', $params['currentStep'] -1), array(
-	'class' => 'button')
+	'action' => 'signup_step_step', $params['currentStep'] -1), array(
+	'class' => 'secondary button')
 );
 ?>
