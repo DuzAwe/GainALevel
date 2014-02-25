@@ -5,192 +5,255 @@
 <!--[if gt IE 8]><!-->
 
 <html class="no-js" lang="en">
-    <!--<![endif]-->
-    
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width" name="viewport">
-            
-        <title>Home</title>
-        <link href="stylesheets/normalize.css" rel="stylesheet">
-        <link href="stylesheets/app.css" rel="stylesheet">
-        <script src="js/vendor/custom.modernizr.js"></script><!--Load the AJAX API-->
-        <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-                
-                
-    </head>
-                    
-    <body>
-        <!-- Navigation -->
-        
-        <nav class="top-bar">
-            <ul class="title-area">
-                <!-- Title Area -->
-                
-                <li class="name"><img src="img/haed.png"></li>
-                    
-                    <li class="toggle-topbar menu-icon"><a href=
-                        "#"><span>Menu</span></a></li>
-                </ul>
-                
-                <section class="top-bar-section" style="left: 0%;">
-                    <!-- Right Nav Section -->
-                    
-                    <ul class="right">
-                        <li class="has-dropdown not-click">
-                            <a href="#">Track</a>
-                            
-                            <ul class="dropdown">
-                                <li class=""><a href="#">Workout</a></li>
-                                
-                                <li class=""><a href="#">Nutrition</a></li>
-                                
-                                <li class=""><a href="#">Sleep</a></li>
-                                
-                                <li class=""><a href="#">Performance</a></li>
-                                
-                                <li class=""><a href="#">Measurements</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li class=""><a href="#">Dashboard</a></li>
-                        
-                        <li class=""><a href="#">Tools</a></li>
-                        
-                        <li class="has-form"><a class="register button" data-reveal-id=
-                            "myModal" href="#">Getting Started</a></li>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+
+    <title>Track</title>
+    <link href="stylesheets/normalize.css" rel="stylesheet">
+    <link href="stylesheets/app.css" rel="stylesheet">
+    <script src="js/vendor/custom.modernizr.js"></script><!--Load the AJAX API-->
+
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+
+    <nav class="top-bar">
+        <ul class="title-area">
+            <!-- Title Area -->
+
+            <li class="name"><img src="img/haed.png"></li>
+
+            <li class="toggle-topbar menu-icon"><a href=
+            "#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section" style="left: 0%;">
+            <!-- Right Nav Section -->
+
+            <ul class="right">
+                <li class="has-dropdown not-click">
+                    <a href="#">Track</a>
+
+                    <ul class="dropdown">
+                        <li class=""><a href="#">Workout</a></li>
+
+                        <li class=""><a href="#">Nutrition</a></li>
+
+                        <li class=""><a href="#">Sleep</a></li>
+
+                        <li class=""><a href="#">Performance</a></li>
+
+                        <li class=""><a href="#">Measurements</a></li>
                     </ul>
-                </section>
-            </nav><!-- End Navigation -->
-            
-            
-            
-            <!-- First Band (Image) -->
-            
-            <div class="row poop">
-                <div class="large-12 columns set">
+                </li>
+
+                <li class=""><a href="#">Dashboard</a></li>
+
+                <li class=""><a href="#">Tools</a></li>
+
+                <li class="has-form"><a class="register button" data-reveal-id=
+                "myModal" href="#">Getting Started</a></li>
+            </ul>
+        </section>
+    </nav><!-- End Navigation -->
+
+    <div class="row">
+        <div class="large-12 columns set squat">
+            <h1>Your Doing Day ___ Of Starting Strength</h1>
+
+            <p>Here we will echo training advice or generic happy things.</p>
+
+            <h1>Hoist For Her</h1>
+        </div>
+    </div><!-- First Band -->
+
+    <div class="row">
+        <div class="large-12 columns set squat">
+            <form>
+                <fieldset>
+                    <ul class="button-group track-button-add">
+                        <li><a class="small button" href="#" id="add1">Add
+                        Set</a></li>
+                    </ul>
+
                     <form>
-                        <fieldset>
-                            <ul class="button-group">
-                                <li><a href="#" class="small button " id="go">Add Set</a></li>
-                            </ul>
-                            <form>
-                                <legend>Fieldset Legend</legend>
-                                <div class="row">
-                                    <div class="large-4 columns">
-                                        <div class="row collapse">
-                                            <div class="small-9 columns">
-                                                <input type="text" placeholder="Weight" />
-                                            </div>
-                                            <div class="small-3 columns">
-                                                <span class="postfix radius">Label</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="large-4 columns">
-                                        <div class="row collapse">
-                                            <div class="small-9 columns">
-                                                <input type="text" placeholder="Reps" />
-                                            </div>
-                                            <div class="small-3 columns">
-                                                <span class="postfix radius">Label</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="large-4 columns bell">
-                                        <div class="row collapse">
-                                            <div class="small-9 columns">
-                                                <input type="text" placeholder="Sets" />  
-                                            </div>
-                                        </div>
+                        <legend>Squats <small><a href=
+                        "http://www.youtube.com/watch?v=BUOQoMpYvXk">How to
+                        Squat</a></small></legend>
+
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Weight" type=
+                                        "text">
                                     </div>
                                 </div>
-                            </form>			
-                        </fieldset>
+                            </div>
+
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Reps" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="large-4 columns bell">
+                                <div class="row collapse">
+                                    <div class="small-8 columns">
+                                        <input placeholder="Sets" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                </fieldset>
+            </form>
+        </div>
+    </div><!-- Second Band -->
+
+    <div class="row">
+        <div class="large-12 columns set bench">
+            <form>
+                <fieldset>
+                    <ul class="button-group track-button-add">
+                        <li><a class="small button" href="#" id="add2">Add
+                        Set</a></li>
+                    </ul>
+
+                    <form>
+                        <legend>Bench <small><a href=
+                        "http://www.youtube.com/watch?v=uwygcGdazeM">How to
+                        Bench</a></small></legend>
+
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Weight" type=
+                                        "text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Reps" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="large-4 columns bell">
+                                <div class="row collapse">
+                                    <div class="small-8 columns">
+                                        <input placeholder="Sets" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </form>
+        </div>
+    </div><!-- Third Band -->
+
+    <div class="row">
+        <div class="large-12 columns set deadlift">
+            <form>
+                <fieldset>
+                    <ul class="button-group track-button-add">
+                        <li><a class="small button" href="#" id="add3">Add
+                        Set</a></li>
+                    </ul>
+
+                    <form>
+                        <legend>Deadlift <small><a href=
+                        "https://www.youtube.com/watch?v=Il9Nqvj39jg&amp;feature=player_embedded">
+                        How to Deadlift</a></small></legend>
+
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Weight" type=
+                                        "text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="large-4 columns">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <input placeholder="Reps" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="large-4 columns bell">
+                                <div class="row collapse">
+                                    <div class="small-8 columns">
+                                        <input placeholder="Sets" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <!-- Footer -->
+
+        <div class="zurb-footer-bottom">
+            <div class="row">
+                <div class="large-4 push-8 columns">
+                    <ul class="home-social">
+                        <li><a class="twitter" href="#"></a></li>
+
+                        <li><a class="facebook" href="#"></a></li>
+
+                        <li><a class="mail" href="#"></a></li>
+                    </ul>
+                </div>
+
+                <div class="large-8 pull-4 columns">
+                    <ul class="zurb-links">
+                        <li><a href="#">About</a></li>
+
+                        <li><a href="#">Blog</a></li>
+
+                        <li><a href="#">News <span class=
+                        "show-for-medium-up">&amp; Events</span></a></li>
+
+                        <li><a href="#">Contact</a></li>
+
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+
+                    <p class="copyright">© 2013–2014 DropDeadMedia, All rights
+                    reserved.</p>
                 </div>
             </div>
-            
-            
-            <!-- Third Band (Image Right with Text) -->
-            
-            <div class="row">
-                <div class="large-8 columns">
-                    <h4>This is a content section.</h4>
-                    
-                    <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-                    
-                    <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-                    
-                </div>
-                <div class="large-4 columns">
-                    <img src="http://placehold.it/400x300&text=[img]">
-                    </div>
-                </div>
-                
-           <section>     
-                <!-- Footer -->
-                
-                <div class="zurb-footer-bottom">
-                    <div class="row">
-                        <div class="large-4 push-8 columns">
-                            <ul class="home-social">
-                                <li><a class="twitter" href="#"></a></li>
-                                
-                                <li><a class="facebook" href="#"></a></li>
-                                
-                                <li><a class="mail" href="#"></a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="large-8 pull-4 columns">
-                            <ul class="zurb-links">
-                                <li><a href="#">About</a></li>
-                                
-                                <li><a href="#">Blog</a></li>
-                                
-                                <li><a href="#">News <span class=
-                                    "show-for-medium-up">&amp; Events</span></a></li>
-                                
-                                <li><a href="#">Contact</a></li>
-                                
-                                <li><a href="#">Sitemap</a></li>
-                            </ul>
-                            
-                            <p class="copyright">© 2013–2014 DropDeadMedia, All rights reserved.</p>
-                        </div>
-                    </div>
-                </div><!-- End Footer -->
-	        
-	    </section>
-	    <!-- Load jQuery from Google CDN -->
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script><!-- Load jQuery from a local copy if loading from Google fails -->
-	    <script type="text/javascript">
-			window.jQuery || document.write('<script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"><\/script>')
-	    </script>
-	    <script src="js/vendor/jquery-ui.custom.min.js"></script>
-	    <script src="js/fullcalendar/fullcalendar.min.js"></script>
-	    
-		<script src="js/foundation/foundation.js"></script>
-		<script src="js/foundation/foundation.topbar.js"></script>
-		<script src="js/foundation/foundation.reveal.js"></script>
-		<script src="js/foundation/foundation.abide.js"></script>
-		<script>
-	        $(document).foundation();
-	    </script>
-		<script>
-		$( "#go" ).click(function() {
-			$(".set fieldset").append('<div class="row x"><div class="large-4 columns"><div class="row collapse"><div class="small-9 columns"><input type="text" placeholder="Weight" /></div><div class="small-3 columns"><span class="postfix radius">Label</span></div></div></div><div class="large-4 columns"><div class="row collapse"><div class="small-9 columns"><input type="text" placeholder="Reps" /></div><div class="small-3 columns"><span class="postfix radius">Label</span></div></div></div><div class="large-4 columns"><div class="row collapse"><div class="small-9 columns"><input type="text" placeholder="Sets" /></div></div></div><a href="#">x</a></div>');
-	    
-		});
-	
-		$(document).on("click", ".set .x a", function() {
-			$(this).parent().remove(); 
-	    });
-		</script>
-	    <!-- Modal -->
-	
-	    <div class="reveal-modal small" id="myModal">
+        </div><!-- End Footer -->
+    </section><!-- Load jQuery from Google CDN -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    type="text/javascript"></script><!-- Load jQuery from a local copy if loading from Google fails -->
+    <script type="text/javascript">
+        window.jQuery || document.write('<script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"><\/script>')
+    </script><script src="js/vendor/jquery-ui.custom.min.js"></script><script src="js/fullcalendar/fullcalendar.min.js"></script><script src="js/foundation/foundation.js"></script><script src="js/foundation/foundation.topbar.js"></script><script src="js/foundation/foundation.reveal.js"></script><script src="js/foundation/foundation.abide.js"></script><script src="js/starting-strenght.js"></script><script>
+        $(document).foundation();
+    </script><!-- Modal -->
+
+    <div class="reveal-modal small" id="myModal">
         <form data-abide="">
             <div class="name-field">
                 <label>Your name <small>required</small></label>
@@ -206,5 +269,5 @@
             </div><button type="submit">Submit</button>
         </form><a class="close-reveal-modal">×</a>
     </div><!-- End Modal -->
-	</body>
+</body>
 </html>

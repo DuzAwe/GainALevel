@@ -1,15 +1,42 @@
-.top-bar{
+.top-bar {
+    height: 65px;
+    margin-bottom: 0;
+}
 
-	height: 50px;
-	margin-bottom: 0px;
-	
+.title-area {
+    height: 60px;
+    margin-bottom: 0;
 }
 
 .top-bar-section ul li > a.button.register {
-  @include button-style ($bg:#fc4f00);
+    @include button-style ($bg:#fc4f00);
 }
 
-.top-bar .title-area .name{
-	padding-left: 10px;
+.top-bar .title-area .name {
+    padding-left: 30px;
+    padding-top: 10px;
 }
 
+.top-bar-section {
+    padding-right: 20px;
+    
+}
+
+img.id-image{
+	height: 35px;
+	width: 35px;
+}
+
+.top-bar-section li a.height{
+	height: 65px;
+	padding-top: 10px;
+}
+
+.top-bar-section > ul > .divider{
+	height: 65px;
+}
+
+.top-bar-section li a.space{
+	height: 35px;
+	
+}

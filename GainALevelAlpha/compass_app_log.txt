@@ -727,3 +727,93 @@ Load paths:
 2014-02-13 13:11:37    create stylesheets/app.css 
 2014-02-13 13:11:38    create stylesheets/normalize.css 
 2014-02-18 11:30:54 overwrite stylesheets/app.css 
+2014-02-21 10:46:51 overwrite stylesheets/app.css 
+2014-02-21 10:47:31    remove .sass-cache/ 
+2014-02-21 10:47:31    remove stylesheets/app.css 
+2014-02-21 10:47:31    remove stylesheets/normalize.css 
+2014-02-21 10:47:38    create stylesheets/app.css 
+2014-02-21 10:47:38    create stylesheets/normalize.css 
+2014-02-21 10:48:11 identical stylesheets/app.css 
+2014-02-21 10:49:43 overwrite stylesheets/app.css 
+2014-02-21 10:53:13 identical stylesheets/app.css 
+2014-02-21 10:53:23 overwrite stylesheets/app.css 
+2014-02-21 10:53:43 overwrite stylesheets/app.css 
+2014-02-21 10:54:59 overwrite stylesheets/app.css 
+2014-02-21 10:55:19 overwrite stylesheets/app.css 
+2014-02-21 10:55:33 overwrite stylesheets/app.css 
+2014-02-21 11:06:28 overwrite stylesheets/app.css 
+2014-02-21 11:06:49 overwrite stylesheets/app.css 
+2014-02-21 14:48:09    remove .sass-cache/ 
+2014-02-21 14:48:10    remove stylesheets/app.css 
+2014-02-21 14:48:10    remove stylesheets/normalize.css 
+2014-02-21 14:48:14    create stylesheets/app.css 
+2014-02-21 14:48:14    create stylesheets/normalize.css 
+2014-02-24 12:50:26 overwrite stylesheets/app.css 
+2014-02-24 12:50:57 overwrite stylesheets/app.css 
+2014-02-24 12:51:10 overwrite stylesheets/app.css 
+2014-02-24 12:51:34 overwrite stylesheets/app.css 
+2014-02-24 12:51:57 overwrite stylesheets/app.css 
+2014-02-24 12:53:03     error sass/app.scss (Line 17 of sass/_nav.scss: Invalid CSS after ".title-area": expected "{", was "">"
+
+"">
+            <!-- Title Area -->
+
+            <li class="name"><img src="img/haed.png"></li>
+
+            <li class="toggle-topbar menu-icon"><a href="" may only be used at the beginning of a compound selector.)
+2014-02-24 12:53:03 overwrite stylesheets/app.css 
+2014-02-24 12:53:08 overwrite stylesheets/app.css 
+2014-02-24 12:53:25 overwrite stylesheets/app.css 
+2014-02-24 12:53:47 overwrite stylesheets/app.css 
+2014-02-24 12:54:21 overwrite stylesheets/app.css 
+2014-02-24 13:14:09 overwrite stylesheets/app.css 
+2014-02-24 13:14:20 overwrite stylesheets/app.css 
+2014-02-24 13:15:29 overwrite stylesheets/app.css 
+2014-02-24 13:15:42 overwrite stylesheets/app.css 
+2014-02-24 13:16:04 overwrite stylesheets/app.css 
+2014-02-24 13:16:16 overwrite stylesheets/app.css 
+2014-02-24 13:23:37 overwrite stylesheets/app.css 
+2014-02-24 13:26:00 overwrite stylesheets/app.css 
+2014-02-24 13:26:27 overwrite stylesheets/app.css 
+2014-02-24 13:27:12 overwrite stylesheets/app.css 
+2014-02-24 13:29:04     error sass/app.scss (Line 12 of sass/_nav.scss: Invalid CSS after "...tylebg: #fc4f00": expected ";", was ");")
+2014-02-24 13:29:04 overwrite stylesheets/app.css 
+2014-02-24 13:29:34     error sass/app.scss (Line 12 of sass/_nav.scss: Invalid CSS after "...button-style(bg": expected comma, was ": #fc4f00);")
+2014-02-24 13:29:34 overwrite stylesheets/app.css 
+2014-02-24 13:30:13 overwrite stylesheets/app.css 
+2014-02-24 13:31:32 overwrite stylesheets/app.css 
+2014-02-24 13:31:53 overwrite stylesheets/app.css 
+2014-02-24 13:33:22     error sass/app.scss (Line 274 of sass/_footer.scss: Invalid CSS after "...nly screen and ": expected media expression (e.g. (min-device-width: 800px)), was "min-width 768px...")
+2014-02-24 13:33:22 overwrite stylesheets/app.css 
+2014-02-24 13:33:34 overwrite stylesheets/app.css 
+2014-02-24 13:50:06 identical stylesheets/app.css 
+2014-02-24 14:00:15 overwrite stylesheets/app.css 
+2014-02-25 09:17:07 overwrite stylesheets/app.css 
+2014-02-25 09:17:52 overwrite stylesheets/app.css 
+2014-02-25 09:22:36 overwrite stylesheets/app.css 
+2014-02-25 09:22:55 overwrite stylesheets/app.css 
+2014-02-25 09:26:39 overwrite stylesheets/app.css 
+2014-02-25 09:45:57 overwrite stylesheets/app.css 
+2014-02-25 09:47:14 overwrite stylesheets/app.css 
+2014-02-25 09:52:13 overwrite stylesheets/app.css 
+2014-02-25 09:52:19 overwrite stylesheets/app.css 
+2014-02-25 09:52:48 overwrite stylesheets/app.css 
+2014-02-25 09:53:00 overwrite stylesheets/app.css 
+2014-02-25 10:09:14 overwrite stylesheets/app.css 
+2014-02-25 10:09:34 overwrite stylesheets/app.css 
+2014-02-25 10:18:26 overwrite stylesheets/app.css 
+2014-02-25 10:33:33 identical stylesheets/app.css 
+2014-02-25 10:34:42 overwrite stylesheets/app.css 
+2014-02-25 10:34:46 identical stylesheets/app.css 
+2014-02-25 10:36:04 overwrite stylesheets/app.css 
+2014-02-25 10:37:27 overwrite stylesheets/app.css 
+2014-02-25 10:37:44 overwrite stylesheets/app.css 
+2014-02-25 10:38:02 overwrite stylesheets/app.css 
+2014-02-25 10:39:01 overwrite stylesheets/app.css 
+2014-02-25 10:39:29 overwrite stylesheets/app.css 
+2014-02-25 10:39:41 overwrite stylesheets/app.css 
+2014-02-25 10:39:50 overwrite stylesheets/app.css 
+2014-02-25 10:40:03 overwrite stylesheets/app.css 
+2014-02-25 10:40:15 overwrite stylesheets/app.css 
+2014-02-25 10:44:20 overwrite stylesheets/app.css 
+2014-02-25 10:52:40 overwrite stylesheets/app.css 
