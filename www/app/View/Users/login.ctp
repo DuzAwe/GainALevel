@@ -5,9 +5,9 @@
 		echo $this->Form->input('password');
 	?>
 	<div class="row">
-	<?php
-		echo $this->Form->submit('Login', array('class' => 'small button', 'div' => false));
-	?>
+		<?php
+			echo $this->Form->submit('Login', array('class' => 'small button', 'div' => false));
+		?>
 		<div onClick="location.href='signup_setup'" class="small secondary button">Register</div>
 	</div>
 </div>

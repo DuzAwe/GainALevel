@@ -13,6 +13,6 @@
 		<td><?php foreach ($userPress as $press): ?>		<?php echo $press	['Strengthtable']['level']; ?>&nbsp;<?php endforeach; ?></td>
 		<td><?php foreach ($userDeadlift as $deadlift): ?>	<?php echo $deadlift['Strengthtable']['level']; ?>&nbsp;<?php endforeach; ?></td>
 		<td><?php foreach ($userSquat as $squat): ?>		<?php echo $squat	['Strengthtable']['level']; ?>&nbsp;<?php endforeach; ?></td>
-		//<td><?php //$userLevel = (($userPress + $userBench + $userDeadlift + $userSquat)/4); echo $userLevel?>&nbsp;</td>
+		<td><?php //$userLevel = (($userPress + $userBench + $userDeadlift + $userSquat)/4); echo $userLevel?>&nbsp;</td>
 	</tr>
 </table>

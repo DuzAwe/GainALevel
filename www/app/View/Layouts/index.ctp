@@ -52,13 +52,12 @@
 				<nav class="top-bar">
 					<ul class="title-area">
 						<!-- Title Area -->
-						<li class="name"><a href="/"><img src="img/haed.png"></a></li>
+						<li class="name"><a href="/"><img src="/img/header.png"></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class="divider"></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
@@ -72,11 +71,8 @@
 									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
-							<li class="divider"></li>
-							<li class=""><a href="/performance" class="height">Preformance</a></li>
-							<li class="divider"></li>
-							<li class=""><a href="/tools" class="height">Tools</a></li>
-							<li class="divider"></li>
+							<li class=""><a href="/users/performance" class="height">Preformance</a></li>
+							<li class=""><a href="/users/tools" class="height">Tools</a></li>
 							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="http://www.crown-church.org.uk/images/member_photos/default_user.jpg" href="#"></img></a>
 								<ul class="dropdown">
 									<li class=""><a class="space" href="/users/photo">Photo Upload</a></li>
@@ -86,7 +82,6 @@
 									<li class=""><a class="space" href="/users/logout">Logout</a></li>
 								</ul>
 							 </li>
-							<li class="divider"></li>
 						</ul>
 					</section>
 				</nav>
@@ -96,13 +91,12 @@
 				<nav class="top-bar">
 					<ul class="title-area">
 						<!-- Title Area -->
-						<li class="name"><a href="/"><img src="img/haed.png"></a></li>
+						<li class="name"><a href="/"><img src="/img/header.png"></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class="divider"></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
@@ -116,15 +110,11 @@
 									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
-							<li class="divider"></li>
-							<li class=""><a href="/performance" class="height">Preformance</a></li>
-							<li class="divider"></li>
-							<li class=""><a href="/tools" class="height">Tools</a></li>
-							<li class="divider"></li>
+							<li class=""><a href="/users/performance" class="height">Preformance</a></li>
+							<li class=""><a href="/users/tools" class="height">Tools</a></li>
 							<li class="has-form height">
 								<a href="#" class="register button"  data-reveal-id="myModal">Getting Started</a>
 							</li>
-							<li class="divider"></li>
 						</ul>
 					</section>
 				</nav>

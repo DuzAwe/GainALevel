@@ -52,7 +52,7 @@
 				<nav class="top-bar">
 					<ul class="title-area">
 						<!-- Title Area -->
-						<li class="name"><a href="/"><img src="img/haed.png"></a></li>
+						<li class="name"><a href="/"><img src="img/header.png"></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
@@ -97,7 +97,7 @@
 					<!-- Title Area -->
 					<ul class="title-area">
 						<li class="name">
-							<a href="/home"><img src="/img/haed.png"></a>
+							<a href="/home"><img src="/img/header.png"></a>
 						</li>
 					</ul>
 						
