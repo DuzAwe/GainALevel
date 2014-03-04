@@ -2,9 +2,12 @@
 	class HomeController extends AppController {
 
 		public $helpers = array('Html', 'Form');
+		var $components = array('Auth');
 
 		public function beforeFilter() {
+			parent::beforeFilter();
 			$this->theme = 'Foundation';
+			$this->Auth->allow('add');
 		}
 
 		public function beforeRender() {
@@ -15,8 +18,6 @@
 
 		public function index(){
 			
-			$this->layout = 'index';
-			
 			$this->Session->delete('form');
 			
 			$this->set('users', $this->Home->User->find('all', array(
@@ -25,11 +26,27 @@
 			$this->Home->User->Outcome->find('all');
 			$this->Home->User->Dietplan->find('all');
 			
+			$this->layout = 'index';
+			
+			if ($this->Auth->user()) {
+				$this->layout = "setup";
+				echo "Logged In";
+			} else {
+				$this->layout = "index";
+				echo "Not logged in";
+			}
+		}
+		
+		public function login() {
+			
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
 					return $this->redirect($this->Auth->redirectURL());
-				}
+					$this->Session->setFlash(__('Logged In'));
+				} else {
 				$this->Session->setFlash(__('Invalid username or password, try again'));
+				$this->redirect(array('controller' => 'home', 'action' => 'index'));
+				}
 			}
 
 		}

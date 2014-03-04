@@ -1,6 +1,7 @@
 .top-bar {
     height: 65px;
     margin-bottom: 0;
+   
 }
 
 .title-area {
@@ -30,6 +31,10 @@ img.id-image{
 .top-bar-section li a.height{
 	height: 65px;
 	padding-top: 10px;
+	 -webkit-transition: background 1s ease-in-out;
+	 -o-transition: background 1s ease-in-out;
+	 -moz-transition: background 1s ease-in-out;
+	 transition:  background 1s ease-in-out;
 }
 
 .top-bar-section > ul > .divider{
@@ -38,5 +43,36 @@ img.id-image{
 
 .top-bar-section li a.space{
 	height: 35px;
+	 -webkit-transition: background 1s ease-in-out;
+	 -o-transition: background 1s ease-in-out;
+	 -moz-transition: background 1s ease-in-out;
+	 transition: background 1s ease-in-out;
+	
+}
+
+
+.top-bar-section li a.space:hover{
+	height: 35px;
+	background: #5E7C87;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+	transition-property: background;
+	
+	
+}
+
+.top-bar-section li a.height:hover{
+	height: 65px;
+	padding-top: 10px;
+	background: #5E7C87;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+	transition-property: background;
+	
+}
+
+.top-bar-section li.height{
+	height: 65px;
+	padding-top: 10px;
 	
 }

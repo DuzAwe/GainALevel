@@ -16,3 +16,30 @@
 #donutchart2 {
 	margin-bottom: 10px;
 }
+
+a{
+	color: #de1f26;
+}
+
+a:hover{
+	color: #b1191e;
+}
+
+.side-nav li a{
+	color: #de1f26;	
+}
+
+.side-nav li a:hover{
+	color: #b1191e;	
+}
+
+
+label {
+font-size: 0.775em;
+color: #4d4d4d;
+cursor: pointer;
+display: block;
+font-weight: 500;
+margin-bottom: 0.1875em;
+line-height: 1.5em;
+}

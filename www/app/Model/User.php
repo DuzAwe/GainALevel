@@ -1,90 +1,77 @@
 <?php
-
-App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
-
 class User extends AppModel {
-
-	public $hasOne = array(
-		'Plan' => array(
-			'foreignKey' => false,
-			'conditions' => array('User.workoutplan = Plan.id')
+	public $name = 'User';
+	public $displayField = 'name';
+	
+	public $validate = array(
+		'name'=>array(
+			'Please enter your firstname.'=>array(
+				'rule'=>'notEmpty',
+				'message'=>'Please enter your firstname.'
+			)
 		),
+		'username'=>array(
+			'The username must be between 5 and 15 characters.'=>array(
+				'rule'=>array('between', 5, 15),
+				'message'=>'The username must be between 5 and 15 characters.'
+			),
+			'That username has already been taken'=>array(
+				'rule'=>'isUnique',
+				'message'=>'That username has already been taken.'
+			)
+		),
+		'email'=>array(
+			'Valid email'=>array(
+				'rule'=>array('email'),
+				'message'=>'Please enter a valid email address'
+			),
+			'That email has already been taken'=>array(
+				'rule'=>'isUnique',
+				'message'=>'That email has already been taken.'
+			)
+		),
+		'password'=>array(
+		    'Not empty'=>array(
+		        'rule'=>'notEmpty',
+		        'message'=>'Please enter your password'
+		    ),
+		    'Match passwords'=>array(
+		        'rule'=>'matchPasswords',
+		        'message'=>'Your passwords do not match'
+		    )
+		),
+		'password_confirmation'=>array(
+		    'Not empty'=>array(
+		        'rule'=>'notEmpty',
+		        'message'=>'Please confirm your password'
+		    )
+		)
+	);
+	
+	public $hasOne = array(
 		'Dietplan' => array(
 			'foreignKey' => false,
-			'conditions' => array('User.dietplan = Dietplan.id')
+			'conditions' =>array('User.dietplan = Dietplan.user_id')
 		),
 		'Outcome' => array(
 			'foreignKey' => false,
-			'conditions' => array('User.outcome = Outcome.id')
-		),
-		'Gender' => array(
-			'foreignKey' => false,
-			'conditions' => array('User.gender = Gender.id')
+			'conditions' =>array('User.outcome = Outcome.user_id')
 		)
 	);
-
-	var $validate = array(
-		'firstname' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'lastname' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'email' => array(
-			'email' => array(
-				'rule' => array('email'),
-				'message' => 'Please enter a vaild email'
-			),
-			'uniqueEmail' => array(
-				'rule' => 'isUnique',
-				'message' => 'This email has already been used'
-			)
-		),
-		'password' => array(
-			'rule' => array('minLength', 6),
-			'message' => 'Minimum six characters please'
-		),
-		'height' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'birthday' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'height' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'weight' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'outcome' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'workoutplan' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		),
-		'dietplan' => array(
-			'rule' => 'notEmpty',
-			'message' => 'Required Field'
-		)
-	);
-
-	public function beforeSave($options = array()) {
-		if (isset($this->data[$this->alias]['password'])) {
-			$passwordHasher = new SimplePasswordHasher();
-			$this->data[$this->alias]['password'] = $passwordHasher->hash(
-				$this->data[$this->alias]['password']
-			);
-		}
-		return true;
+	
+	public function matchPasswords($data) {
+	    if ($data['password'] == $this->data['User']['password_confirmation']) {
+	        return true;
+	    }
+	    $this->invalidate('password_confirmation', 'Your passwords do not match');
+	    return false;
 	}
-
+	
+	public function beforeSave($options = array()) {
+	    if (isset($this->data['User']['password'])) {
+	        $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
+	    }
+	    return true;
+	}
 }
 ?>

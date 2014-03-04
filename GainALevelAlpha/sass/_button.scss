@@ -1,10 +1,8 @@
 .button{
-@include button-style ($bg:#fc4f00);
-}
-
+	@include button-style ($bg:#de1f26);
+	}
 
 ul.button-group.track-button-add{
 	float: right;
-	padding: 0px 0px 10px 600px;
-	
-}
+	padding: 0px 0px 10px 80%;
+	}

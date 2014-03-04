@@ -21,7 +21,7 @@ $( "#add3" ).click(function() {
 		
 		$(".row").on("click", ".set .x a", function() {
        		event.preventDefault();
-	   		$(this).parent().parent().parent().parent().remove(); 
+	   		$(this).parentsUntil(".set",".row.x").remove(); 
 		});
 
 
