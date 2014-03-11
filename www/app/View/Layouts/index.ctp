@@ -53,12 +53,14 @@
 					<ul class="title-area">
 						<!-- Title Area -->
 						<li class="name"><a href="/"><img src="/img/header.png"></a></li>
+						
+						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class=""><a href="#" class="height">Welcome <?php echo $current_user['name'];?></a></li>
+							<li class=""><a href="/" class="height">Welcome <?php echo $current_user['name'];?></a></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
@@ -93,6 +95,8 @@
 					<ul class="title-area">
 						<!-- Title Area -->
 						<li class="name"><a href="/"><img src="/img/header.png"></a></li>
+						
+						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
@@ -129,25 +133,30 @@
 	
 		<?php echo $this->fetch('content'); ?>
 	<!-- Modals -->
-		
-		<div id="myModal" class="reveal-modal small">
-			<iframe seamless src="<?php 
+		<!--Modal1-->
+		<div class="reveal-modal small" id="myModal" >
+			<iframe src="<?php 
 				echo $this->Html->url(array(
 					'controller' => 'Users',
 					'action' => 'login'
 					));
-				?>" class="myFrame" scrolling="no" frameborder="0">
+				?>" scrolling="no" frameborder="0">
 			</iframe>
+			<div class="row">
 			<div data-reveal-id="secondModal" class="small secondary button">Register</div>
 			<a class="close-reveal-modal">&#215;</a>
+			</div>
 		</div>
+		<!--End Modal1-->
+		
+		<!--Modal2-->
 		<div class="reveal-modal small" id="secondModal">
-			<iframe seamless src="<?php 
+			<iframe src="<?php 
 				echo $this->Html->url(array(
 					'controller' => 'Users',
 					'action' => 'signup_setup'
 					));
-				?>" class="myFrame" style="height: 500px" scrolling="no" frameborder="0">
+				?>" style="height: 500px" scrolling="no" frameborder="0">
 			</iframe>
 			<a class="close-reveal-modal">×</a>
 		</div><!-- End Modal2 -->
@@ -196,7 +205,7 @@
 			echo $this->Html->script('vendor/jquery-ui.custom.min.js');
 			echo $this->Html->script('fullcalendar/fullcalendar.min.js');
 		?>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>-->
 		<?php
 			echo $this->Html->script('fullcalendar/Cal.js');
 	
@@ -215,17 +224,17 @@
 		
 		<!-- Google Chart -->
 		
-		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+		<!--<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 		<script>
 			google.load("visualization", "1", {packages:["corechart"]});
 		      	google.setOnLoadCallback(drawChart);
 		      	function drawChart() {
 		        	var data = google.visualization.arrayToDataTable([
 					  ['Months', 'Deadlift', 'OHP','Squat','Bench'],
-					  ['<?php echo date("M", strtotime("-3 month")); ?>',  100,      	40,    	160,    80],
+					  ['<?php /*echo date("M", strtotime("-3 month")); ?>',  100,      	40,    	160,    80],
 					  ['<?php echo date("M", strtotime("-2 month")); ?>',  120,      	50,    	170,    60],
 					  ['<?php echo date("M", strtotime("-1 month")); ?>',  160,    		60,    	100,    80],
-					  ['<?php echo date("M"); ?>'						,  220,      	55,  	90,    	100]
+					  ['<?php echo date("M"); */?>'						,  220,      	55,  	90,    	100]
 					]);
 			
 			        var options = {
@@ -246,4 +255,3 @@
 	 
 	</body>
 	
-</html>

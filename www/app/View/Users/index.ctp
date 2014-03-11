@@ -10,7 +10,7 @@
 					<h3 class="show-for-small"></h3>
 
 					<div class="panel">
-						<h2>Database Echoing Practice</h2>
+						<!--<h2>Database Echoing Practice</h2>
 						<table cellpadding="0" cellspacing="0">
 							<tr>
 								<th>id</th>
@@ -20,7 +20,7 @@
 								<th>Plan</th>
 								<th>Outcome</th>
 							</tr>
-							<?php foreach ($users as $user): ?>
+							<?php/* foreach ($users as $user): ?>
 							<tr>
 								<td><?php echo $user['User']['id']; ?>&nbsp;</td>
 								<td><?php echo $user['User']['name']; ?>&nbsp;</td>
@@ -29,8 +29,8 @@
 								<td><?php echo $user['Dietplan']['dietname']; ?>&nbsp;</td>
 								<td><?php echo $user['Outcome']['outcomename']; ?>&nbsp;</td>
 							</tr>
-							<?php endforeach; ?>
-						</table>
+							<?php endforeach; */?>
+						</table>-->
 					</div>
 
 					<h3 class="show-for-small">Header</h3>

@@ -21,13 +21,18 @@
 			chart.draw(data, options);
 		  }
 		 </script>
-		 <script>
+		
 			 <?php foreach ($userSleep as $uS):?><?php $hours = $uS['Sleep']['hours'];?><?php endforeach ?>
-			 <?php $missed = 8 - $hours;
+			 <?php 
+			
+			 $missed = 8 - $hours;
+			
 				if ($missed <= 0){
-					$missed == 0;
+					
+					$missed = 0;
 				}
 			 ?>
+			  <script>
 		 google.load("visualization", "1", {packages:["corechart"]});
 		  google.setOnLoadCallback(drawChart);
 		  function drawChart() {

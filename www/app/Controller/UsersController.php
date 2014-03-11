@@ -362,6 +362,8 @@ class UsersController extends AppController {
 				$prevSessionData = $this->Session->read('form.data');
 				$currentSessionData = Hash::merge( (array) $prevSessionData, $this->request->data);
 				
+				
+				
 				 //------------ if this is not the last step we replace session data with the new merged array ------------//
 				 //------------ update the max progress value and redirect to the next step ------------//
 
@@ -369,6 +371,9 @@ class UsersController extends AppController {
 					$this->Session->write('form.data', $currentSessionData);
 					$this->Session->write('form.params.maxProgress', $stepNumber);
 					$this->redirect(array('action' => 'signup_step', $stepNumber+1));
+					if($stepnumber == 2){
+						$this->Session->write('outcome', $currentSessionData['User']['outcome']);
+					}
 				} else {
 
 					 //------------ otherwise, this is the final step, so we have to save the data to the database ------------//
@@ -391,6 +396,8 @@ class UsersController extends AppController {
 		 //------------ here we load the proper view file, depending on the stepNumber variable passed via GET ------------//
 
 		$this->render('signup_step_'.$stepNumber);
+		
+		
 	}
 	
 	public function signup_complete($id = null) {
@@ -424,7 +431,11 @@ class UsersController extends AppController {
 		$userDeadlift = $this->Auth->user('deadliftmax');
 		$userSquat = $this->Auth->user('squatmax');
 		
-		$this->set('userCalories', $this->User->find('all'));
+		$this->set('userCalories', $this->User->find('all', array(
+				'conditions' => array(
+					'User.id' => $this->Auth->user('id')
+				)
+		)));
 		
 		$this->User->bindModel(array(
 			'hasOne' => array('Strengthtable' => array('foreignKey' => false))), false);
@@ -523,13 +534,27 @@ class UsersController extends AppController {
 		
 		$this->User->unbindModel(array(
 			'hasOne' => array('Strengthtable')));
+			
 		$this->User->bindModel(array(
 			'hasOne' => array('Plan' => array('foreignKey' => false))), false);
-		
+			
 		foreach ($userPressLevel as $press): $userPressLevelFinal = $press['Strengthtable']['level']; endforeach;
 		foreach ($userBenchLevel as $bench): $userBenchLevelFinal = $bench['Strengthtable']['level']; endforeach;
 		foreach ($userDeadliftLevel as $deadlift): $userDeadliftLevelFinal = $deadlift['Strengthtable']['level']; endforeach;
 		foreach ($userSquatLevel as $squat): $userSquatLevelFinal = $squat['Strengthtable']['level']; endforeach; 
+		
+		if($userPressLevel == null){
+			$userPressLevelFinal = 1;
+		}
+		if($userBenchLevel == null){
+			$userBenchLevelFinal = 1;
+		}
+		if($userDeadliftLevel == null){
+			$userDeadliftLevelFinal = 1;
+		}
+		if($userSquatLevel == null){
+			$userSquatLevelFinal = 1;
+		}
 		
 		$userLevel = floor(($userPressLevelFinal + $userBenchLevelFinal + $userDeadliftLevelFinal + $userSquatLevelFinal)/4);
 		

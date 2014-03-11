@@ -21,6 +21,8 @@
 				'action' => 'signup_step', $params['currentStep'] -1), array(
 				'class' => 'secondary button')
 			);
+		
+		
 		?>
 	</div>
 </div>

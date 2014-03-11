@@ -58,7 +58,7 @@
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class="height">Welcome <?php echo $current_user['name'];?></li>
+							<li class=""><a href="/" class="height">Welcome <?php echo $current_user['name'];?></a></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 

@@ -19,43 +19,59 @@
 		echo $this->Form->input('weight', array(
 			'label' => 'Weight - Kilograms'));?>
 		<br/>
+		
+		<?
+		
+		if($this->Session->read('outcome') == 1)
+		{
+			?>
 			<h3>Measurments</h3><p> - Centemeters</p>
 			<?php
 			echo $this->Form->input('neck',  array(
-				'label' => 'Neck'));?>
+				'label' => 'Neck',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('shoulders', array(
-				'label' => 'Shoulders'));?>
+				'label' => 'Shoulders',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('chest', array(
-				'label' => 'Chest'));?>
+				'label' => 'Chest',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('bicep', array(
-				'label' => 'Bicep'));?>
+				'label' => 'Bicep',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('forarm', array(
-				'label' => 'Forearm'));?>
+				'label' => 'Forearm',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('waist', array(
-				'label' => 'Waist'));?>
+				'label' => 'Waist',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('hips', array(
-				'label' => 'Hips'));?>
+				'label' => 'Hips',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('thigh', array(
-				'label' => 'Thigh'));?>
+				'label' => 'Thigh',
+				'value' => 0));?>
 			<br/>
 			<?php
 			echo $this->Form->input('calves', array(
-				'label' => 'Calves'));?>
+				'label' => 'Calves',
+				'value' => 0)); }?>
 			<br/>
+			
 		<h3>Max Lifts</h3><p> - Kilograms</p>
 		<?php
 		echo $this->Form->input('benchmax', array(
