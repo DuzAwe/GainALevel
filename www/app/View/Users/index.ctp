@@ -19,7 +19,6 @@
 								<th>email</th>
 								<th>Plan</th>
 								<th>Outcome</th>
-								<th class="actions">Actions</th>
 							</tr>
 							<?php foreach ($users as $user): ?>
 							<tr>
@@ -29,20 +28,9 @@
 								<td><?php echo $user['User']['email']; ?>&nbsp;</td>
 								<td><?php echo $user['Dietplan']['dietname']; ?>&nbsp;</td>
 								<td><?php echo $user['Outcome']['outcomename']; ?>&nbsp;</td>
-								<td class="actions">
-									<?php echo $this->Html->link('View', array('action' => 'view', $user['User']['id'])); ?>
-									<?php if ($current_user['id'] == $user['User']['id']): ?>
-										<?php echo $this->Html->link('Edit', array('action' => 'edit', $user['User']['id'])); ?>
-										<?php echo $this->Form->postLink('Delete', array('action' => 'delete', $user['User']['id']), array('confirm'=>'Are you sure you want to delete that user?')); ?>
-									<?php endif; ?>
-								</td>
 							</tr>
 							<?php endforeach; ?>
 						</table>
-						<h3>Actions</h3>
-						<ul>
-							<li><?php echo $this->Html->link('New User', array('action' => 'add')); ?></li>
-						</ul>
 					</div>
 
 					<h3 class="show-for-small">Header</h3>

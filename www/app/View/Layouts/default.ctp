@@ -52,41 +52,37 @@
 				<nav class="top-bar">
 					<ul class="title-area">
 						<!-- Title Area -->
-						<li class="name"><a href="/"><img src="img/header.png"></a></li>
+						<li class="name"><a href="/"><img src="/img/header.png"></a></li>
 					</ul>
 
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class="divider"></li>
+							<li class="height">Welcome <?php echo $current_user['name'];?></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
 								<ul class="dropdown">
-									<li class=""><a class="space" href="/track">Workout</a></li>
+									<li class=""><a class="space" href="/users/track">Workout</a></li>
 
-									<li class=""><a class="space" href="/calories">Nutrition</a></li>
+									<li class=""><a class="space" href="/users/calories">Nutrition</a></li>
 
-									<li class=""><a class="space" href="/sleep">Sleep</a></li>
+									<li class=""><a class="space" href="/users/sleep">Sleep</a></li>
 
-									<li class=""><a class="space" href="/measurments">Measurements</a></li>
+									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
-							<li class="divider"></li>
-							<li class=""><a href="/performance" class="height">Preformance</a></li>
-							<li class="divider"></li>
-							<li class=""><a href="/tools" class="height">Tools</a></li>
-							<li class="divider"></li>
+							<li class=""><a href="users/performance" class="height">Preformance</a></li>
+							<li class=""><a href="users/tools" class="height">Tools</a></li>
 							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="http://www.crown-church.org.uk/images/member_photos/default_user.jpg" href="#"></img></a>
 								<ul class="dropdown">
-									<li class=""><a class="space" href="/photo">Photo Upload</a></li>
+									<li class=""><a class="space" href="/users/photo">Photo Upload</a></li>
 
-									<li class=""><a class="space" href="/settings">Settings</a></li>
+									<li class=""><a class="space" href="/users/settings">Settings</a></li>
 
-									<li class=""><a class="space" href="/poop">Poop</a></li>
+									<li class=""><a class="space" href="/users/logout">Poop</a></li>
 								</ul>
 							 </li>
-							<li class="divider"></li>
 						</ul>
 					</section>
 				</nav>
@@ -143,6 +139,16 @@
 			</iframe>
 			<a class="close-reveal-modal">&#215;</a>
 		</div>
+		<div class="reveal-modal small" id="secondModal">
+			<iframe seamless src="<?php 
+				echo $this->Html->url(array(
+					'controller' => 'Users',
+					'action' => 'signup_setup'
+					));
+				?>" class="myFrame" style="height: 500px" scrolling="no" frameborder="0">
+			</iframe>
+			<a class="close-reveal-modal">×</a>
+		</div><!-- End Modal2 -->
 
 	<!-- End Modals -->
 		
@@ -188,6 +194,10 @@
 		?>
 		<script>
 			$(document).foundation();
+			
+			$(function() {
+				FastClick.attach(document.body);
+			});
 		</script>
 	 
 	</body>

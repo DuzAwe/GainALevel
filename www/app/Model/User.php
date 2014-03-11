@@ -47,18 +47,7 @@ class User extends AppModel {
 		    )
 		)
 	);
-	
-	public $hasOne = array(
-		'Dietplan' => array(
-			'foreignKey' => false,
-			'conditions' =>array('User.dietplan = Dietplan.user_id')
-		),
-		'Outcome' => array(
-			'foreignKey' => false,
-			'conditions' =>array('User.outcome = Outcome.user_id')
-		)
-	);
-	
+
 	public function matchPasswords($data) {
 	    if ($data['password'] == $this->data['User']['password_confirmation']) {
 	        return true;

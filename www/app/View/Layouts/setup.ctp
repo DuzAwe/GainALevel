@@ -34,6 +34,7 @@
 		/*-- Load javascript --*/
 	
 			echo $this->Html->script('vendor/jquery-2.0.3.min.js');
+			echo $this->Html->script('vendor/custom.modernizr.js');
 	
 		/*-- Fetch data --*/
 	
@@ -48,6 +49,20 @@
 		<?php echo $this->Session->flash(); ?>
 	
 		<?php echo $this->fetch('content'); ?>
+		
+		<?php
+	
+		/*-- Load javascript --*/
+	
+			echo $this->Html->script('foundation/foundation.js');
+			echo $this->Html->script('foundation/foundation.reveal.js');
+	
+		/*-- Fetch data --*/
+
+			echo $this->fetch('script');
+	
+		?>
+		
 	</body>
 	
 </html>

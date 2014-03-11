@@ -1,6 +1,6 @@
 <div class="users form">
 <?php echo $this->Form->create('User');?>
- 		<legend>Register</legend>
+ 	<legend>Register</legend>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('lastname');

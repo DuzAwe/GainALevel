@@ -1,3 +1,7 @@
 <h2>Login Complete!!</h2>
 
-<div class="button" onClick="top.location.href='index'">Let's Go!</div>
+<script>
+window.onload = function () {
+    window.parent.location.reload()
+}
+</script>

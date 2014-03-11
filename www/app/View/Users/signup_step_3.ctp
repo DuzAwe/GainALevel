@@ -4,7 +4,12 @@
 		echo $this->Form->create('User');?>
 		<h3>Tell us about yourself...</h3>
 		<?php
-		echo $this->Form->input('birthdate');?>
+		echo $this->Form->input('birthdate', array(
+			'minYear' => date('Y')-100,
+			'maxYear' => date('Y')-16,
+			'empty' => ('--')
+		));
+		?>
 		<br/>
 		<?php
 		echo $this->Form->input('height', array(

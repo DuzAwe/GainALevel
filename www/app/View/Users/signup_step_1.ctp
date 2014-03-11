@@ -4,7 +4,8 @@
 			<legend>Register</legend>
 		<?php
 		
-			$options = array("1" => 'Male', "2" => 'Female');
+			$genderOptions = array("1" => 'Male', "2" => 'Female');
+			$activityOptions = array("1" => 'No Cardio', "2" => 'Cardio');
 			$attributes = array('legend' => false);
 		
 			echo $this->Form->input('name');
@@ -15,7 +16,8 @@
 		?>
 		<p>Gender</p>
 		<?php
-			echo $this->Form->radio('gender', $options, $attributes);
+			echo $this->Form->radio('gender', $genderOptions, $attributes);
+			echo $this->Form->radio('activity', $activityOptions, $attributes);
 		?>
 	<?php echo $this->Form->button('Next step', array(
 				'class' => 'button')

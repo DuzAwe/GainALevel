@@ -1,86 +1,14 @@
 <!-- Main Content Section -->
-	<?php foreach ($oneWeekPresss as $oneWeekPress): 
-		echo $oneWeekPress['Performance']['weight'];
-	?>
-	<br/>
-	<?php
-		echo $oneWeekPress['Performance']['workoutname'];
-	?>
-	<br/>
-	<?php
-		echo $oneWeekPress['User']['id'];
-	?>
-	<br/>
-	<?php
-		echo $oneWeekPress['Performance']['datecompleted'];
-	?>
-	<br/>
-	<?php
-	endforeach; ?>
-	<?php foreach ($twoWeekPresss as $twoWeekPress): 
-		echo $twoWeekPress['Performance']['weight'];
-	?>
-	<br/>
-	<?php
-		echo $twoWeekPress['Performance']['workoutname'];
-	?>
-	<br/>
-	<?php
-		echo $twoWeekPress['User']['id'];
-	?>
-	<br/>
-	<?php
-		echo $twoWeekPress['Performance']['datecompleted'];
-	?>
-	<br/>
-	<?php
-	endforeach; ?>
-	<?php foreach ($threeWeekPresss as $threeWeekPress): 
-		echo $threeWeekPress['Performance']['weight'];
-	?>
-	<br/>
-	<?php
-		echo $threeWeekPress['Performance']['workoutname'];
-	?>
-	<br/>
-	<?php
-		echo $threeWeekPress['User']['id'];
-	?>
-	<br/>
-	<?php
-		echo $threeWeekPress['Performance']['datecompleted'];
-	?>
-	<br/>
-	<?php
-	endforeach; ?>
-	<?php foreach ($fourWeekPresss as $fourWeekPress): 
-		echo $fourWeekPress['Performance']['weight'];
-	?>
-	<br/>
-	<?php
-		echo $fourWeekPress['Performance']['workoutname'];
-	?>
-	<br/>
-	<?php
-		echo $fourWeekPress['User']['id'];
-	?>
-	<br/>
-	<?php
-		echo $fourWeekPress['Performance']['datecompleted'];
-	?>
-	<br/>
-	<?php
-	endforeach; ?>
   <script type="text/javascript">
 		  google.load("visualization", "1", {packages:["corechart"]});
 		  google.setOnLoadCallback(drawChart);
 		  function drawChart() {
 			var data = google.visualization.arrayToDataTable([
 			  ['Date', 'Your Lift', 'Expected Lift'],
-			  ['<?php foreach ($oneWeekPresss as $oneWeekPress): echo $oneWeekPress['Performance']['datecompleted']?>',<?php  echo $oneWeekPress['Performance']['weight']; endforeach;  ?>,      1000],
-			  ['<?php foreach ($twoWeekPresss as $twoWeekPress): echo $twoWeekPress['Performance']['datecompleted']?>',<?php  echo $twoWeekPress['Performance']['weight']; endforeach;  ?>,      1260],
-			  ['<?php foreach ($threeWeekPresss as $threeWeekPress): echo $threeWeekPress['Performance']['datecompleted']?>',<?php  echo $threeWeekPress['Performance']['weight']; endforeach;  ?>,       1020],
-			  ['<?php foreach ($fourWeekPresss as $fourWeekPress): echo $fourWeekPress['Performance']['datecompleted']?>',<?php  echo $fourWeekPress['Performance']['weight']; endforeach;  ?>,      1140]
+			  ['<?php foreach ($oneWeekPress as $oWPress): echo $oWPress['Performance']['datecompleted']?>',<?php  echo $oWPress['Performance']['weight']; endforeach;  ?>,      1000],
+			  ['<?php foreach ($twoWeekPress as $tWPress): echo $tWPress['Performance']['datecompleted']?>',<?php  echo $tWPress['Performance']['weight']; endforeach;  ?>,      1260],
+			  ['<?php foreach ($threeWeekPress as $thWPress): echo $thWPress['Performance']['datecompleted']?>',<?php  echo $thWPress['Performance']['weight']; endforeach;  ?>,       1020],
+			  ['<?php foreach ($fourWeekPress as $fWPress): echo $fWPress['Performance']['datecompleted']?>',<?php  echo $fWPress['Performance']['weight']; endforeach;  ?>,      1140]
 			]);
 
 			var options = {
@@ -94,13 +22,19 @@
 		  }
 		 </script>
 		 <script>
+			 <?php foreach ($userSleep as $uS):?><?php $hours = $uS['Sleep']['hours'];?><?php endforeach ?>
+			 <?php $missed = 8 - $hours;
+				if ($missed <= 0){
+					$missed == 0;
+				}
+			 ?>
 		 google.load("visualization", "1", {packages:["corechart"]});
 		  google.setOnLoadCallback(drawChart);
 		  function drawChart() {
 			var data = google.visualization.arrayToDataTable([
 			  ['Sleep', 'Hours per Day'],
-			  ['Hours slept',     5],
-			  ['Sleep Missed',     3]
+			  ['Hours slept',     <?php echo $hours  ?>],
+			  ['Sleep Missed',     <?php echo $missed ?>]
 			]);
 
 			var options = {
@@ -117,13 +51,19 @@
 		  }
 		  </script>
 			<script type="text/javascript">
+			<?php foreach ($userCal as $uC):?><?php $eaten = $uC['Calories']['calories']; $caloriesNeeded = $uC['User']['calories'];?><?php endforeach ?>
+			<?php $needToEat = $caloriesNeeded - $eaten;
+				if ($needToEat <= 0){
+					$needToEat == 0;
+				}
+			 ?>
 		  google.load("visualization", "1", {packages:["corechart"]});
 		  google.setOnLoadCallback(drawChart);
 		  function drawChart() {
 			var data = google.visualization.arrayToDataTable([
 			  ['Calories', 'Calories'],
-			  ['Calories Eaten',     1500],
-			  ['Calories To Be Eaten',     500],
+			  ['Calories Eaten',     <?php echo $eaten ?>],
+			  ['Calories To Be Eaten',     <?php echo $needToEat ?>],
 			]);
 
 			var options = {
@@ -186,19 +126,13 @@
     "pr-wall programTable table table-bordered table-hover table-condensed">
         <thead>
             <tr>
-                <th>1 rep max</th>
+                <th>Overhead Press</th>
 
-                <th>2 rep max</th>
+                <th>Bench Press</th>
 
-                <th>3 rep max</th>
+                <th>Deadlift</th>
 
-                <th>5 rep max</th>
-
-                <th>8 rep max</th>
-
-                <th>10 rep max</th>
-
-                <th>20 rep max</th>
+                <th>Squat</th>
             </tr>
         </thead>
 
@@ -211,12 +145,6 @@
                 <td>40 kg</td>
 
                 <td>35 kg</td>
-
-                <td>-</td>
-
-                <td>25 kg</td>
-
-                <td>-</td>
             </tr>
         </tbody>
     </table>
@@ -332,38 +260,3 @@
       
     </div>
   </div>
-  
-  
-  <!-- Footer -->
-
-        <div class="zurb-footer-bottom">
-            <div class="row">
-                <div class="large-4 push-8 columns">
-                    <ul class="home-social">
-                        <li><a class="twitter" href="#"></a></li>
-
-                        <li><a class="facebook" href="#"></a></li>
-
-                        <li><a class="mail" href="#"></a></li>
-                    </ul>
-                </div>
-
-                <div class="large-8 pull-4 columns">
-                    <ul class="zurb-links">
-                        <li><a href="#">About</a></li>
-
-                        <li><a href="#">Blog</a></li>
-
-                        <li><a href="#">News <span class=
-                        "show-for-medium-up">&amp; Events</span></a></li>
-
-                        <li><a href="#">Contact</a></li>
-
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
-
-                    <p class="copyright">© 2013–2014 DropDeadMedia, All rights
-                    reserved.</p>
-                </div>
-            </div>
-        </div><!-- End Footer -->

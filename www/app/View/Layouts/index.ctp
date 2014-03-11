@@ -58,6 +58,7 @@
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
+							<li class=""><a href="#" class="height">Welcome <?php echo $current_user['name'];?></a></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
@@ -71,7 +72,7 @@
 									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="/users/performance" class="height">Preformance</a></li>
+							<li class=""><?php echo $this->Html->link('Performance', array('controller' => 'users', 'action' => 'performance', $current_user['id']), array('class' => 'height')); ?></li>
 							<li class=""><a href="/users/tools" class="height">Tools</a></li>
 							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="http://www.crown-church.org.uk/images/member_photos/default_user.jpg" href="#"></img></a>
 								<ul class="dropdown">
@@ -137,8 +138,19 @@
 					));
 				?>" class="myFrame" scrolling="no" frameborder="0">
 			</iframe>
+			<div data-reveal-id="secondModal" class="small secondary button">Register</div>
 			<a class="close-reveal-modal">&#215;</a>
 		</div>
+		<div class="reveal-modal small" id="secondModal">
+			<iframe seamless src="<?php 
+				echo $this->Html->url(array(
+					'controller' => 'Users',
+					'action' => 'signup_setup'
+					));
+				?>" class="myFrame" style="height: 500px" scrolling="no" frameborder="0">
+			</iframe>
+			<a class="close-reveal-modal">×</a>
+		</div><!-- End Modal2 -->
 
 	<!-- End Modals -->
 		
@@ -195,6 +207,10 @@
 		?>
 		<script>
 			$(document).foundation();
+			
+			$(function() {
+				FastClick.attach(document.body);
+			});
 		</script>
 		
 		<!-- Google Chart -->
