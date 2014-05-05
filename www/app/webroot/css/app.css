@@ -3997,6 +3997,64 @@ form.custom .custom.disabled {
   border-radius: 3px;
 }
 
+/* Pricing Tables */
+/* line 120, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table {
+  border: solid 1px #dddddd;
+  margin-left: 0;
+  margin-bottom: 1.25em;
+}
+/* line 60, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table * {
+  list-style: none;
+  line-height: 1;
+}
+/* line 123, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table .title {
+  background-color: #dddddd;
+  padding: 0.9375em 1.25em;
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+  font-size: 1em;
+}
+/* line 124, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table .price {
+  background-color: #eeeeee;
+  padding: 0.9375em 1.25em;
+  text-align: center;
+  color: #333333;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+/* line 125, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table .description {
+  background-color: white;
+  padding: 0.9375em;
+  text-align: center;
+  color: #777777;
+  font-size: 0.75em;
+  font-weight: normal;
+  line-height: 1.4;
+  border-bottom: dotted 1px #dddddd;
+}
+/* line 126, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table .bullet-item {
+  background-color: white;
+  padding: 0.9375em;
+  text-align: center;
+  color: #333333;
+  font-size: 0.875em;
+  font-weight: normal;
+  border-bottom: dotted 1px #dddddd;
+}
+/* line 127, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_pricing-tables.scss */
+.pricing-table .cta-button {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 1.25em 1.25em 0;
+}
+
 /* Side Nav */
 /* line 66, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_side-nav.scss */
 .side-nav {
@@ -5711,4 +5769,28 @@ label {
 ul.button-group.track-button-add {
   float: right;
   padding: 0px 0px 10px 80%;
+}
+
+/* line 10, ../sass/_button.scss */
+.reg-button {
+  padding-top: 1em;
+}
+
+/* line 54, ../sass/app.scss */
+#loginModal iframe {
+  height: 220px;
+  width: 90%;
+}
+
+/* line 59, ../sass/app.scss */
+#signupModal iframe {
+  height: 700px;
+  width: 90%;
+}
+
+/* line 64, ../sass/app.scss */
+.sedentary {
+  position: relative;
+  top: -33px;
+  left: 20px;
 }

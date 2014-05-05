@@ -194,11 +194,6 @@
 	    
 	 <!-- End Footer -->
 	</section>
-		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2/jquery.min.js" type="text/javascript"></script>-->
-		<!-- Load jQuery from a local copy if loading from Google fails -->
-		<!--<script type="text/javascript">
-			window.jQuery || document.write('<script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"><\/script>')
-		</script>-->
 		<?php
 	
 		/*-- Load javascript --*/
@@ -206,12 +201,7 @@
 			echo $this->Html->script('foundation/foundation.js');
 			echo $this->Html->script('foundation/foundation.topbar.js');
 			echo $this->Html->script('foundation/foundation.reveal.js');
-			echo $this->Html->script('vendor/jquery-ui.custom.min.js');
-			echo $this->Html->script('fullcalendar/fullcalendar.min.js');
-		?>
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>-->
-		<?php
-			echo $this->Html->script('fullcalendar/Cal.js');
+			echo $this->Html->script('docs.js');
 	
 		/*-- Fetch data --*/
 
@@ -225,37 +215,6 @@
 				FastClick.attach(document.body);
 			});
 		</script>
-		
-		<!-- Google Chart -->
-		
-		<!--<script src="https://www.google.com/jsapi" type="text/javascript"></script>
-		<script>
-			google.load("visualization", "1", {packages:["corechart"]});
-		      	google.setOnLoadCallback(drawChart);
-		      	function drawChart() {
-		        	var data = google.visualization.arrayToDataTable([
-					  ['Months', 'Deadlift', 'OHP','Squat','Bench'],
-					  ['<?php /*echo date("M", strtotime("-3 month")); ?>',  100,      	40,    	160,    80],
-					  ['<?php echo date("M", strtotime("-2 month")); ?>',  120,      	50,    	170,    60],
-					  ['<?php echo date("M", strtotime("-1 month")); ?>',  160,    		60,    	100,    80],
-					  ['<?php echo date("M"); */?>'						,  220,      	55,  	90,    	100]
-					]);
-			
-			        var options = {
-			          backgroundColor:'none', 
-			          chartArea:{left:50,top:50,width:"70%",height:"75%"},
-			          hAxis: {title: 'Months',  titleTextStyle: {color: '#333'}},
-			          vAxis: {minValue: 0},
-			          legend:{position: 'top'}
-			          
-			        };
-			
-			        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-			        chart.draw(data, options);
-			      }
-		</script>
-		
-		<!-- End Google Chart -->
 	 
 	</body>
 </html>

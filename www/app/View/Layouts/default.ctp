@@ -58,7 +58,6 @@
 					<section class="top-bar-section" style="left: 0%;">
 						<!-- Right Nav Section -->
 						<ul class="right">
-							<li class=""><a href="/" class="height">Welcome <?php echo $current_user['name'];?></a></li>
 							<li class="has-dropdown not-click">
 								<a href="#" class="height">Track</a>
 
@@ -68,12 +67,16 @@
 									<li class=""><a class="space" href="/users/calories">Nutrition</a></li>
 
 									<li class=""><a class="space" href="/users/sleep">Sleep</a></li>
-
-									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
 							<li class=""><a href="users/performance" class="height">Preformance</a></li>
-							<li class=""><a href="users/tools" class="height">Tools</a></li>
+							<li class="has-dropdown not-click"><a class="height">Tools</a>
+								<ul class="dropdown">
+									<li class=""><a class="space" href="/users/plan">Plans</a></li>
+									
+									<li class=""><a class="space" href="/users/calculators">Calculators</a></li>
+								</ul>
+							</li>
 							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="http://www.crown-church.org.uk/images/member_photos/default_user.jpg" href="#"></img></a>
 								<ul class="dropdown">
 									<li class=""><a class="space" href="/users/photo">Photo Upload</a></li>

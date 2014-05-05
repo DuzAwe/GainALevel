@@ -27,13 +27,11 @@
 		<br/>
 		<br/>
 		<?php 
-			
-			echo $this->Form->end('Submit', array('class' => 'button'));
-
 			echo $this->Html->link('Previous step', array(
 				'action' => 'signup_step', $params['currentStep'] -1), array(
 				'class' => 'secondary button')
 			);
+			echo $this->Form->submit('Submit', array('class' => 'button'));
 		?>
 	</div>
 </div>

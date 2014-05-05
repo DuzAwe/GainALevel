@@ -46,7 +46,7 @@ echo $this->Form->hidden('calories', array(
 		echo $this->Form->submit('Submit', array('class' => 'small button', 'div' => false));
 
 		echo $this->Html->link('I will choose my own plan!', array(
-			'action' => 'plans'), array(
+			'action' => 'plan'), array(
 			'class' => 'small secondary button')
 		);
 	?>

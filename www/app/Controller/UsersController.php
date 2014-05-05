@@ -175,27 +175,23 @@ class UsersController extends AppController {
 	}
 	
 	public function beginner() {
-	    $this->layout = 'index';
+	    $this->layout = 'plan';
 	}
 	
 	public function intermediate() {
-	    $this->layout = 'index';
+	    $this->layout = 'plan';
 	}
 	
 	public function advanced() {
-	    $this->layout = 'index';
+	    $this->layout = 'plan';
 	}
 	
 	public function plan() {
-	    $this->layout = 'index';
+	    $this->layout = 'plan';
 	}
 	
 	public function logincomplete() {
 	    $this->layout = 'setup';
-	}
-	
-	public function plans() {
-	    $this->layout = 'index';
 	}
 	
 	public function track() {
@@ -230,6 +226,8 @@ class UsersController extends AppController {
 		
 		$this->set('planData', $this->User->find('all'));
 		
+		$this->set('trackIndividual', $this->User->find('all'));
+		
 	    $this->User->bindModel(array(
 			'hasOne' => array(
 				'Performance' => array(
@@ -237,7 +235,7 @@ class UsersController extends AppController {
 					'conditions' =>array('User.id = Performance.user_id')
 					)
 			)
-		));
+		), false);
 	    
 	    $this->set('userTrack', $this->User->find('all', array(
 			'conditions' => array(
@@ -246,12 +244,6 @@ class UsersController extends AppController {
 			'order' => array('Performance.datecompleted' => 'DESC'),
 			'limit' => 1
 		)));
-		
-		/*$this->set('userTrack', $this->User->find('all', array(
-			'conditions' => array(
-				'User.id' => $userId
-			)
-		)));*/
 
 	}
 	
@@ -371,9 +363,7 @@ class UsersController extends AppController {
 					$this->Session->write('form.data', $currentSessionData);
 					$this->Session->write('form.params.maxProgress', $stepNumber);
 					$this->redirect(array('action' => 'signup_step', $stepNumber+1));
-					if($stepnumber == 2){
-						$this->Session->write('outcome', $currentSessionData['User']['outcome']);
-					}
+
 				} else {
 
 					 //------------ otherwise, this is the final step, so we have to save the data to the database ------------//
@@ -425,11 +415,33 @@ class UsersController extends AppController {
 		
 		//------------ Retrieving User Weights From Session ------------//
 		
-		$userWeight = $this->Auth->user('weight');
-		$userPress = $this->Auth->user('pressmax');
-		$userBench = $this->Auth->user('benchmax');
-		$userDeadlift = $this->Auth->user('deadliftmax');
-		$userSquat = $this->Auth->user('squatmax');
+		$userWeight = floor($this->Auth->user('weight'));
+		$userPress = floor($this->Auth->user('pressmax'));
+		$userBench = floor($this->Auth->user('benchmax'));
+		$userDeadlift = floor($this->Auth->user('deadliftmax'));
+		$userSquat = floor($this->Auth->user('squatmax'));
+		
+		if ($this->Auth->user('gender') == 1 && $userWeight >= 145) {
+				$userWeight = 145;
+		}
+		
+		if ($this->Auth->user('gender') == 2 && $userWeight >= 90) {
+				$userWeight = 90;
+		}
+		
+		if($userPress >= 300){
+			$userPress = 300;
+		}
+		if($userBench >= 300){
+			$userBench = 300;
+		}
+		if($userDeadlift >= 300){
+			$userDeadlift = 300;
+		}
+		if($userSquat >= 300){
+			$userSquat = 300;
+		}
+		
 		
 		$this->set('userCalories', $this->User->find('all', array(
 				'conditions' => array(

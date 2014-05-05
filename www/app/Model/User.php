@@ -5,9 +5,9 @@ class User extends AppModel {
 	
 	public $validate = array(
 		'name'=>array(
-			'Please enter your firstname.'=>array(
+			'Please enter your full name.'=>array(
 				'rule'=>'notEmpty',
-				'message'=>'Please enter your firstname.'
+				'message'=>'Please enter your full name.'
 			)
 		),
 		'username'=>array(
@@ -45,7 +45,67 @@ class User extends AppModel {
 		        'rule'=>'notEmpty',
 		        'message'=>'Please confirm your password'
 		    )
-		)
+		),
+		'birthdate'=>array(
+			'You must be at least 16 years old to use this service'=>array(
+				'rule'=>array('comparison', '>=', 16),
+				'message'=>'You must be at least 16 years old to use this service.'
+			)
+		),
+		'outcomeField'=>array(
+			'Not empty'=>array(
+		        'rule'=>'notEmpty',
+		        'message'=>'Please choose a goal'
+		    )
+		),
+		'genderField'=>array(
+			'Not empty'=>array(
+		        'rule'=>'notEmpty',
+		        'message'=>'Please choose a gender'
+		    )
+		),
+		'activityField'=>array(
+			'Not empty'=>array(
+		        'rule'=>'notEmpty',
+		        'message'=>'Please choose an option'
+		    )
+		),
+		'height'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
+		'weight'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
+		'benchmax'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
+		'pressmax'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
+		'deadliftmax'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
+		'squatmax'=>array(
+			'Please enter a posative number'=>array(
+				'rule'=>array('comparison', '>=', 0),
+				'message'=>'Please enter a posative number.'
+			)
+		),
 	);
 
 	public function matchPasswords($data) {
