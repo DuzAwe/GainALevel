@@ -1,4 +1,4 @@
-<div class="signup">
+<div class="signup step1">
     <div class="form">
         <?php echo $this->Form->create('User');?>
         <div class="row">

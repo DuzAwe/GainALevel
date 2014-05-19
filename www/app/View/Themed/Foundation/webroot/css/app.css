@@ -3911,6 +3911,9 @@ table tr td {
 /* line 66, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
 table tr.even, table tr.alt, table tr:nth-of-type(even) {
   background: #f9f9f9; }
+  
+.tablefunk tr.even, .tablefunk tr.alt, .tablefunk tr:nth-of-type(even) {
+  background: #fff; }
 
 /* line 73, ../../../../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_extensions/zurb-foundation-4.0.8/scss/foundation/components/_tables.scss */
 table thead tr th,
@@ -3978,7 +3981,7 @@ ul.button-group.track-button-add {
   width: 90%; }
 
 #signupModal iframe {
-  height: 760px;
+  /height: 760px;
   width: 100%; }
 
 .radiogaga label {
@@ -3988,3 +3991,35 @@ ul.button-group.track-button-add {
 
 .date select {
   width: 30%; }
+
+.step1{
+  height: 600px; }
+
+.radio-center{
+	text-align: center;
+}
+
+.padding5{
+	padding: 5px;
+}
+
+.padding35{
+	padding: 35px;
+}
+
+.checkboxalign{
+	position: relative;
+	top: -18px;
+	left: 15px;
+}
+
+.top-padding-form{
+	padding-top: 20px;
+	margin-top:	20px;
+	
+}
+
+.large-12 columns{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}

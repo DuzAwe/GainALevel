@@ -1,3 +1,10 @@
+<script>
+	window.onunload = refreshParent;
+	function refreshParent() {
+		window.opener.location.reload();
+	}
+</script>
+
 <h2>Your Plan Is</h2>
 <?php foreach ($userLevelFinal as $level): ?>
 <h3><?php echo $level['Plan']['planname']; $userLevel = $level['Plan']['planlevel']; ?>&nbsp;</h3>
@@ -18,15 +25,17 @@ $birthdate = date($birthday);
 $userAge = $now - $birthdate;
 
 if($userGender == 1){
-	$userCal = floor((10 * $userWeight)+(6.25 * $userHeight)-(5 * $userAge) + 5);
+	$userCalStart = (10 * $userWeight)+(6.25 * $userHeight)-(5 * $userAge) + 5;
 } else {
-	$userCal = floor((10 * $userWeight)+(6.25 * $userHeight)-(5 * $userAge) - 161);
+	$userCalStart = (10 * $userWeight)+(6.25 * $userHeight)-(5 * $userAge) - 161;
 }
 
+$userCal = $userCalStart+($userCalStart/5);
+
 if($userActivity == 1){
-	$userFinalCal = $userCal * 1.2;
+	$userFinalCal = floor($userCal * 1.2);
 } else {
-	$userFinalCal = $userCal * 1.375;
+	$userFinalCal = floor($userCal * 1.375);
 }
 
 echo $this->Form->create('User', array('action'=>'signup_complete'));
@@ -42,13 +51,10 @@ echo $this->Form->hidden('calories', array(
 ?>
 
 <div class="row">
-	<?php
-		echo $this->Form->submit('Submit', array('class' => 'small button', 'div' => false));
-
-		echo $this->Html->link('I will choose my own plan!', array(
-			'action' => 'plan'), array(
-			'class' => 'small secondary button')
-		);
-	?>
+	<a href="/users/logincomplete">
+		<?php
+			echo $this->Form->button('Accept', array('type' => 'submit', 'class' => 'small button', 'div' => false));
+		?>
+	</a>
 </div>
 

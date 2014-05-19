@@ -21,7 +21,7 @@ class AppController extends Controller {
     }
     
     public function beforeFilter() {
-        $this->Auth->allow('index', 'signup_setup', 'login', 'signup_step');
+        $this->Auth->allow('index', 'signup_setup', 'login', 'signup_step', 'plan', 'jason');
         $this->set('logged_in', $this->Auth->loggedIn());
         $this->set('current_user', $this->Auth->user());
     }

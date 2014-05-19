@@ -52,19 +52,19 @@ class User extends AppModel {
 				'message'=>'You must be at least 16 years old to use this service.'
 			)
 		),
-		'outcomeField'=>array(
+		'outcome'=>array(
 			'Not empty'=>array(
 		        'rule'=>'notEmpty',
 		        'message'=>'Please choose a goal'
 		    )
 		),
-		'genderField'=>array(
+		'gender'=>array(
 			'Not empty'=>array(
 		        'rule'=>'notEmpty',
 		        'message'=>'Please choose a gender'
 		    )
 		),
-		'activityField'=>array(
+		'activity'=>array(
 			'Not empty'=>array(
 		        'rule'=>'notEmpty',
 		        'message'=>'Please choose an option'

@@ -31,7 +31,7 @@
 	
 		/*-- Load javascript --*/
 	
-			echo $this->Html->script('vendor/jquery-2.0.3.min.js');
+			echo $this->Html->script('vendor/jquery-2.1.1.min.js');
 			echo $this->Html->script('vendor/custom.modernizr.js');
 	
 		/*-- Fetch data --*/
@@ -61,12 +61,12 @@
 						<!-- Right Nav Section -->
 						<ul class="right">
 							<li class="has-dropdown not-click">
-								<a href="#" class="height">Track</a>
+								<a class="height">Track</a>
 
 								<ul class="dropdown">
 									<li class=""><a class="space" href="/users/track">Workout</a></li>
 
-									<li class=""><a class="space" href="/users/calories">Nutrition</a></li>
+									<li class=""><a class="space" href="/users/calories">Calories</a></li>
 
 									<li class=""><a class="space" href="/users/sleep">Sleep</a></li>
 								</ul>
@@ -76,14 +76,14 @@
 								<ul class="dropdown">
 									<li class=""><a class="space" href="/users/plan">Plans</a></li>
 									
-									<li class=""><a class="space" href="/users/calculators">Calculators</a></li>
+									<li class=""><a class="space" href="/users/calculators"><strike>Calculators</strike></a></li>
 								</ul>
 							</li>
-							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="http://www.crown-church.org.uk/images/member_photos/default_user.jpg" href="#"></img></a>
+							<li class="has-dropdown not-click" ><a class="height"><img class="id-image" src="/img/userimage.png" href="#"></img></a>
 								<ul class="dropdown">
-									<li class=""><a class="space" href="/users/photo">Photo Upload</a></li>
+									<li class=""><a class="space" href="/users/photo"><strike>Photo Upload</strike></a></li>
 
-									<li class=""><a class="space" href="/users/settings">Settings</a></li>
+									<li class=""><a class="space" href="/users/settings"><strike>Settings</strike></a></li>
 
 									<li class=""><a class="space" href="/users/logout">Logout</a></li>
 								</ul>
@@ -111,15 +111,19 @@
 								<ul class="dropdown">
 									<li class=""><a class="space" href="/users/track">Workout</a></li>
 
-									<li class=""><a class="space" href="/users/calories">Nutrition</a></li>
+									<li class=""><a class="space" href="/users/calories">Calories</a></li>
 
 									<li class=""><a class="space" href="/users/sleep">Sleep</a></li>
-
-									<li class=""><a class="space" href="/users/measurments">Measurements</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="/users/performance" class="height">Preformance</a></li>
-							<li class=""><a href="/users/tools" class="height">Tools</a></li>
+							<li class=""><a href="/users/performance" class="height">Performance</a></li>
+							<li class="has-dropdown not-click"><a class="height">Tools</a>
+								<ul class="dropdown">
+									<li class=""><a class="space" href="/users/plan">Plans</a></li>
+									
+									<li class=""><a class="space" href="/users/calculators"><strike>Calculators</strike></a></li>
+								</ul>
+							</li>
 							<li class="has-form height">
 								<a href="#" class="register button"  data-reveal-id="loginModal">Getting Started</a>
 							</li>

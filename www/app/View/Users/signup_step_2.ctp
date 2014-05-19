@@ -2,6 +2,8 @@
 	<div class="form">
 		<?php
 
+			$options = array("1" => '', "2" => '', "3"=>'');
+
 			$attributes = array(
 				'legend' => false,
 				'label' => 'Outcome',
@@ -13,31 +15,26 @@
 		?>
 		
 		<h3>What is your goal?</h3>
-		<table>
+		<table class="tablefunk">
 			<tr>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
+				<th>Body Building</th>
+				<th>Power Lifting</th>
+				<th>Physique</th>
+			</tr>
+			<tr class="radio-center">
+				<td><img src="/img/arnold.png" height="175px" width="125px"/></td>
+				<td><img src="/img/jim.png" height="175px" width="125px"/></td>
+				<td><img src="/img/ryan.png" height="175px" width="125px"/></td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
+				<td>This is all about size and getting big, think of Arnold Schwarzenegger</td>
+				<td>Getting strong, Power lifting is getting as strong as humanly possible</td>
+				<td>Physique is about getting "ripped", having abs and low body fat.</td>
 			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
-			<tr>
+			<tr class="radio-center">
 				<td>
 				<?php
-					echo $this->Form->radio('outcome', $outcome, $attributes);
+					echo $this->Form->radio('outcome', $options, $attributes);
 					
 					echo $this->Form->error('outcome');
 				?>
@@ -45,16 +42,28 @@
 			</tr>
 		</table>
 		
-		<br/>
+		<div class="row">
+			<div class="large-12 columns">
+				<hr>
+			</div>
+		</div>
 		
-		<?php
-			echo $this->Html->link('Previous step', array(
-				'action' => 'signup_step', $params['currentStep'] -1), array(
-				'class' => 'secondary button')
-			);
-			echo $this->Form->button('Next step', array(
-				'class' => 'button')
-			);
-		?>
+		<div class="row">
+			<div class="small-5 columns">
+				<?php
+					echo $this->Html->link('Previous step', array(
+						'action' => 'signup_step', $params['currentStep'] -1), array(
+						'class' => 'secondary button')
+					);
+				?>
+			</div>
+			<div class="small-4 small-offset-3 columns">
+				<?php
+					echo $this->Form->button('Next step', array(
+						'class' => 'button')
+					);
+				?>
+			</div>
+		</div>
 	</div>
 </div>

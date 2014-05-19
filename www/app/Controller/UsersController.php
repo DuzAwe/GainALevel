@@ -43,22 +43,42 @@ class UsersController extends AppController {
 		$this->layout = 'index';
 		$this->User->recursive = 0;
 		$this->Session->delete('form');
+		$userId = $this->Auth->user('id');
 		
 		$this->User->bindModel(array(
 			'hasOne' => array(
 				'Outcome' => array(
 					'foreignKey' => false,
 					'conditions' =>array('User.outcome = Outcome.user_id')
-					),
-				'Dietplan' => array(
-					'foreignKey' => false,
-					'conditions' =>array('User.dietplan = Dietplan.user_id')
 					)
 			)
 		), false);
 		
 		$this->set('users', $this->User->find('all', array(
+			'conditions' => array(
+				'User.id' => $userId
+			),
 			'order' => 'User.id ASC')));
+			
+		$this->set('username', $this->Auth->user('username'));
+		
+		$this->User->bindModel(array(
+			'hasOne' => array(
+				'Calories' => array(
+					'foreignKey' => false,
+					'conditions' =>array('User.id = Calories.user_id')
+					)
+			)
+		));
+		
+		$this->set('userCal', $this->User->find('all', array(
+			'conditions' => array(
+				'User.id = Calories.user_id',
+				'Calories.datecompleted <=' => date('Y-m-d')
+			),
+			'order' => array('Calories.datecompleted' => 'DESC'),
+			'limit' => 1
+		)));
 	}
 	
 	public function add() {
@@ -85,7 +105,7 @@ class UsersController extends AppController {
 			)
 		));
 		
-		$this->set('userCal', $this->User->find('all', array(
+		$this->set('userCalEaten', $this->User->find('all', array(
 			'conditions' => array(
 				'User.id = Calories.user_id',
 				'Calories.datecompleted <=' => date('Y-m-d')
@@ -93,6 +113,8 @@ class UsersController extends AppController {
 			'order' => array('Calories.datecompleted' => 'DESC'),
 			'limit' => 1
 		)));
+		
+		$this->set('userCalNeeded', $this->User->find('all'));
 		
 		$this->User->bindModel(array(
 			'hasOne' => array(
@@ -111,24 +133,6 @@ class UsersController extends AppController {
 			'order' => array('Sleep.datecompleted' => 'DESC'),
 			'limit' => 1
 		)));
-		
-		$this->User->bindModel(array(
-			'hasOne' => array(
-				'Performance' => array(
-					'foreignKey' => false,
-					'conditions' =>array('User.id = Performance.user_id')
-					)
-			)
-		), false);
-		
-		$this->set('oneWeekPress', $this->User->find('all', array(
-			'conditions' => array(
-				'User.id = Performance.user_id',
-				'Performance.datecompleted <=' => date('Y-m-d')
-			),
-			'order' => array('Performance.datecompleted' => 'DESC'),
-				'limit' => 1
-			)));
 		
 		$this->User->bindModel(array(
 			'hasOne' => array(
@@ -171,6 +175,10 @@ class UsersController extends AppController {
 			'order' => array('Performance.datecompleted' => 'DESC'),
 				'limit' => 1
 			)));
+		$this->set('maxLifts', $this->User->find('all', array(
+			'conditions' => array(
+				'User.id = Performance.user_id',
+				))));
 		
 	}
 	
@@ -180,6 +188,10 @@ class UsersController extends AppController {
 	
 	public function intermediate() {
 	    $this->layout = 'plan';
+	}
+	
+	public function jason() {
+	    $this->layout = 'index';
 	}
 	
 	public function advanced() {
@@ -195,7 +207,7 @@ class UsersController extends AppController {
 	}
 	
 	public function track() {
-	    $this->layout = 'index';
+		$this->layout = 'track';
 	    
 	    $userId = $this->Auth->user('id');
 	    
@@ -204,23 +216,6 @@ class UsersController extends AppController {
 				'Performance' => array(
 					'foreignKey' => false
 				)
-			)
-		));
-		
-		if ($this->request->is('post')) {
-			if ($this->User->Performance->save($this->request->data)) {
-				$this->Session->setFlash('Your workout has been saved');
-				$this->redirect(array('action' => 'performance'));
-			} else {
-				$this->Session->setFlash('Your workout could not be saved. Please, try again.');
-			}
-		}
-		
-		$this->User->bindModel(array(
-			'hasOne' => array(
-				'Starting_strength' => array(
-					'foreignKey' => false
-					)
 			)
 		));
 		
@@ -236,15 +231,60 @@ class UsersController extends AppController {
 					)
 			)
 		), false);
-	    
-	    $this->set('userTrack', $this->User->find('all', array(
+		
+		$this->set('lastWorkout', $this->User->find('all', array(
 			'conditions' => array(
 				'Performance.user_id' => $userId
 			),
 			'order' => array('Performance.datecompleted' => 'DESC'),
 			'limit' => 1
 		)));
-
+	    
+	    $this->set('userTrackSquat', $this->User->find('all', array(
+			'conditions' => array(
+				'Performance.user_id' => $userId,
+				'Performance.workout' => 1
+			),
+			'order' => array('Performance.datecompleted' => 'DESC', 'Performance.weight' => 'DESC'),
+			'limit' => 1
+		)));
+		
+		$this->set('userTrackBench', $this->User->find('all', array(
+			'conditions' => array(
+				'Performance.user_id' => $userId,
+				'Performance.workout' => 2
+			),
+			'order' => array('Performance.datecompleted' => 'DESC', 'Performance.weight' => 'DESC'),
+			'limit' => 1
+		)));
+		
+		$this->set('userTrackDeadlift', $this->User->find('all', array(
+			'conditions' => array(
+				'Performance.user_id' => $userId,
+				'Performance.workout' => 3
+			),
+			'order' => array('Performance.datecompleted' => 'DESC', 'Performance.weight' => 'DESC'),
+			'limit' => 1
+		)));
+		
+		$this->set('userTrackPress', $this->User->find('all', array(
+			'conditions' => array(
+				'Performance.user_id' => $userId,
+				'Performance.workout' => 4
+			),
+			'order' => array('Performance.datecompleted' => 'DESC', 'Performance.weight' => 'DESC'),
+			'limit' => 1
+		)));
+		
+		if ($this->request->is('post')) {
+			if ($this->User->Performance->save($this->request->data)) {
+				$this->Session->setFlash('Your workout has been saved');
+				$this->redirect(array('action' => 'performance'));
+			} else {
+				$this->Session->setFlash('Your workout could not be saved. Please, try again.');
+			}
+		}
+		
 	}
 	
 	public function calories() {
@@ -308,19 +348,9 @@ class UsersController extends AppController {
 				'Outcome' => array(
 					'foreignKey' => false,
 					'conditions' =>array('User.outcome = Outcome.user_id')
-					),
-				'Dietplan' => array(
-					'foreignKey' => false,
-					'conditions' =>array('User.dietplan = Dietplan.user_id')
 					)
 			)
 		), false);
-
-		$outcomedata = $this->User->Outcome->find('list', array('fields' => array('user_id', 'outcomename')));
-		$this->set('outcome', $outcomedata);
-
-		$dietdata = $this->User->Dietplan->find('list', array('fields' => array('user_id', 'dietname')));
-		$this->set('diet', $dietdata);
 
 		//------------ check if a view file for this step exists, otherwise redirect to index ------------//
 		
